@@ -38,13 +38,41 @@ const EnquiryForm = () => {
     { value: 'other', label: 'Other' },
   ];
 
-  const handleSubmit = (data: EnquiryFormData) => {
-    console.log('Enquiry submitted:', data);
-    toast({
-      title: "Enquiry Submitted!",
-      description: "Thank you for your interest. We'll get back to you soon.",
-    });
-    form.reset();
+  // const handleSubmit = (data: EnquiryFormData) => {
+  //   console.log('Enquiry submitted:', data);
+  //   toast({
+  //     title: "Enquiry Submitted!",
+  //     description: "Thank you for your interest. We'll get back to you soon.",
+  //   });
+  //   form.reset();
+  // };
+
+  const handleSubmit = async (values) => {
+    try {
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwYqgfGH1ImUyiRUyJc0plXObKZIVv1g32EI2npoS9r7KGeFWRjtahGdSDPWLsfgKsMOA/exec";
+      // deploymentID = AKfycbwYqgfGH1ImUyiRUyJc0plXObKZIVv1g32EI2npoS9r7KGeFWRjtahGdSDPWLsfgKsMOA
+      // google sheet = https://docs.google.com/spreadsheets/d/1h_DwUhdwCRInVwXVmxc2F0BldUYRwmGK_SgmtU39U3E/edit?pli=1&gid=0#gid=0
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(values)
+      });
+
+      const result = await response.json();
+
+      if (result.result === "success") {
+        console.log('Enquiry submitted:', values);
+        toast({
+          title: "Enquiry Submitted!",
+          description: "Thank you for your interest. We'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        alert("Error submitting enquiry");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
   };
 
   return (
