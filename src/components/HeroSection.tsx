@@ -1,90 +1,87 @@
-
-import { Button } from '@/components/ui/button';
-import { Users, Sprout, Heart, Youtube, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Users, Sprout, Heart, Linkedin, Instagram } from 'lucide-react';
+import CountUp from 'react-countup';
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")'
-        }}
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/60"></div>
-      </div>
+        <source src="/hero-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Content */}
-      <div className="relative z-10 pt-20 text-center text-white max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-green-300">Bangla Susthayi Krishi Foundation</span>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-green-900/85"></div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 pt-36 md:pt-32 text-center text-white max-w-5xl mx-auto space-y-8 animate-fadeInSlow">
+        {/* Headline with shimmer */}
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 bg-clip-text text-transparent animate-text-shimmer">
+          Bangla Susthayi Krishi Foundation
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto leading-relaxed">
+
+        {/* Subtitle */}
+        <p className="text-xl md:text-4xl font-semibold mb-8 text-yellow-400 max-w-3xl mx-auto leading-relaxed font-sans">
           Empowering farmers across India through sustainable practices and community support
         </p>
 
-        {/* Social Media Links */}
-        <div className="flex justify-center space-x-4 mb-8">
-          {/*<a 
-            href="" 
-            target="_blank" 
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-6 mb-8">
+          <a
+            href="https://www.linkedin.com/company/susthayi-krishi-foundation/"
+            target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            className="bg-white/70 backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
+            aria-label="LinkedIn"
           >
-            <Youtube className="h-6 w-6" />
-          </a>*/}
-          <a 
-            href="https://www.linkedin.com/company/susthayi-krishi-foundation/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <Linkedin className="h-6 w-6" />
+            <Linkedin className="h-6 w-6 text-green-900" />
           </a>
-          <a 
-            href="https://www.instagram.com/susthayi.krishi.foundation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-            target="_blank" 
+          <a
+            href="https://www.instagram.com/susthayi.krishi.foundation"
+            target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+            className="bg-white/70 backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
+            aria-label="Instagram"
           >
-            <Instagram className="h-6 w-6" />
+            <Instagram className="h-6 w-6 text-pink-600" />
           </a>
-          {/*<a 
-            href="" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <Twitter className="h-6 w-6" />
-          </a>*/}
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
-          <div className="text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <Users className="h-8 w-8 text-green-300" />
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+          {[
+            { icon: Users, end: 1000, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
+            { icon: Sprout, end: 50, suffix: '+', label: 'Projects', color: 'text-yellow-400' },
+            { icon: Heart, end: 15, suffix: '+', label: 'States', color: 'text-orange-700' },
+          ].map(({ icon: Icon, end, suffix, label, color }) => (
+            <div
+              key={label}
+              className="text-center bg-white/50 backdrop-blur-md rounded-3xl p-8 cursor-pointer hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:bg-white/30 transform transition-all duration-300"
+              aria-label={`${end}${suffix} ${label}`}
+            >
+              <div className={`bg-white/30 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center drop-shadow-lg`}>
+                <Icon className={`h-10 w-10 ${color}`} />
+              </div>
+              <div className={`text-4xl font-extrabold ${color} mb-2`}>
+                <CountUp start={1} end={end} duration={2} suffix={suffix} />
+              </div>
+              <div className="text-xl font-semibold text-green-100">{label}</div>
             </div>
-            <div className="text-3xl font-bold text-green-300 mb-2">1000+</div>
-            <div className="text-lg text-green-100">Farmer Members</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <Sprout className="h-8 w-8 text-orange-300" />
-            </div>
-            <div className="text-3xl font-bold text-orange-300 mb-2">50+</div>
-            <div className="text-lg text-green-100">Projects</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <Heart className="h-8 w-8 text-red-300" />
-            </div>
-            <div className="text-3xl font-bold text-red-300 mb-2">15</div>
-            <div className="text-lg text-green-100">States</div>
-          </div>
+          ))}
+        </div>
+
+        {/* Scroll Cue */}
+        <div className="mt-10 flex justify-center animate-bounceSlow">
+          <svg width="28" height="54" className="mx-auto opacity-30" fill="none" viewBox="0 0 28 54">
+            <rect x="1.5" y="1.5" width="25" height="51" rx="12.5" stroke="#fff" strokeWidth="3" />
+            <circle cx="14" cy="14" r="5" fill="#90c53e" />
+          </svg>
         </div>
       </div>
     </section>
