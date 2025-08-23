@@ -1,77 +1,85 @@
+import React, { useState } from "react";
 
-import { useState } from 'react';
-import { Card } from '@/components/ui/card';
+const cardColors = [
+  { bg: "bg-starbucks-green", border: "border-yellow-600" },
+  { bg: "bg-natural-green", border: "border-yellow-300" },
+  { bg: "bg-forest-green", border: "border-yellow-200" },
+  { bg: "bg-yellow-green", border: "border-yellow-600" },
+];
 
-const FlipCards = () => {
-  const [flippedCard, setFlippedCard] = useState<number | null>(null);
+const focusAreas = [
+  {
+    title: "Biodiversity Conservation",
+    frontDesc: "Protecting native seeds and traditional crops",
+    backDesc:
+      "We work with farmers to preserve indigenous varieties, maintain seed banks, and promote crop diversity for resilient agriculture.",
+  },
+  {
+    title: "Regenerative Farming",
+    frontDesc: "Restoring soil health naturally",
+    backDesc:
+      "Organic composting, natural pest control, and crop rotation techniques rebuild soil fertility and eliminate harmful chemicals.",
+  },
+  {
+    title: "Community Development",
+    frontDesc: "Building stronger rural communities",
+    backDesc:
+      "Cooperative farming, skill workshops, and women's empowerment programs strengthen the social fabric of rural India.",
+  },
+  {
+    title: "Innovation",
+    frontDesc: "Blending tradition with modern solutions",
+    backDesc:
+      "We create appropriate technology, mobile apps, and innovative irrigation systems for sustainable progress.",
+  },
+];
 
-  const cards = [
-    {
-      title: "Biodiversity Conservation",
-      icon: "🌱",
-      frontDesc: "Protecting native seeds and traditional crops",
-      backDesc: "We work with farmers to preserve indigenous varieties, maintain seed banks, and promote crop diversity that has sustained India for millennia.",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      title: "Regenerative Farming", 
-      icon: "🚜",
-      frontDesc: "Restoring soil health through natural methods",
-      backDesc: "Our programs teach organic composting, natural pest control, and crop rotation techniques that rebuild soil fertility without harmful chemicals.",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Community Development",
-      icon: "👥", 
-      frontDesc: "Building stronger rural communities",
-      backDesc: "Through cooperative farming, skill development workshops, and women's empowerment programs, we strengthen the social fabric of rural India.",
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      title: "Innovation",
-      icon: "💡",
-      frontDesc: "Blending tradition with modern solutions",
-      backDesc: "We develop appropriate technology solutions, mobile apps for farmers, and innovative irrigation systems that honor traditional wisdom.",
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
+const FocusSection = () => {
+  const [flipped, setFlipped] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-orange-50 to-green-50">
-      <div className="max-w-7xl mx-auto">
+     <section className="relative py-20 px-6 bg-[url('/BackgroundPIC.jpg')] bg-current bg-center">
+      
+      <div className="relative max-w-7xl mx-auto z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-yellow-300 mb-6">
             Our Core Focus Areas
           </h2>
-          <p className="text-xl text-green-700 max-w-3xl mx-auto">
-            Four pillars supporting Bangla Susthayi Krishi Foundation and rural prosperity across India
+          <p className="text-lg text-yellow-400 font-semibold max-w-2xl mx-auto">
+            Four pillars supporting Bangla Susthayi Krishi Foundation and rural prosperity across India.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {cards.map((card, index) => (
+
+        {/* Responsive grid of flipping cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {focusAreas.map((area, i) => (
             <div
-              key={index}
+              key={area.title}
               className="group perspective-1000 h-80"
-              onMouseEnter={() => setFlippedCard(index)}
-              onMouseLeave={() => setFlippedCard(null)}
+              onMouseEnter={() => setFlipped(i)}
+              onMouseLeave={() => setFlipped(null)}
+              onClick={() => setFlipped(flipped === i ? null : i)}
+              tabIndex={0}
+              role="button"
+              aria-pressed={flipped === i}
             >
-              <Card className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
-                flippedCard === index ? 'rotate-y-180' : ''
-              }`}>
+              <div
+                className={`relative w-full h-full duration-700 transform-style-preserve-3d cursor-pointer border-4 rounded-3xl shadow-xl hover:shadow-2xl ${cardColors[i].bg} ${cardColors[i].border} ${
+                  flipped === i ? "rotate-y-180" : ""
+                }`}
+                style={{ minHeight: "20rem" }}
+              >
                 {/* Front */}
-                <div className={`absolute inset-0 w-full h-full backface-hidden rounded-lg bg-gradient-to-br ${card.color} p-6 flex flex-col items-center justify-center text-white text-center`}>
-                  <div className="text-6xl mb-4">{card.icon}</div>
-                  <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
-                  <p className="text-lg opacity-90">{card.frontDesc}</p>
+                <div className="absolute inset-0 w-full h-full backface-hidden flex flex-col items-center justify-center rounded-3xl p-8 text-center">
+                  <div className="text-2xl font-bold mb-3">{area.title}</div>
+                  <p className="text-lg opacity-90">{area.frontDesc}</p>
                 </div>
-                
                 {/* Back */}
-                <div className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-lg bg-gradient-to-br ${card.color} p-6 flex flex-col justify-center text-white`}>
-                  <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-                  <p className="text-base leading-relaxed">{card.backDesc}</p>
+                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 flex flex-col items-center justify-center rounded-3xl bg-white/95 text-orange-900 p-8 cursor-pointer">
+                  <div className="text-lg font-bold mb-3 text-center">{area.title}</div>
+                  <p className="text-base leading-relaxed text-center">{area.backDesc}</p>
                 </div>
-              </Card>
+              </div>
             </div>
           ))}
         </div>
@@ -80,4 +88,4 @@ const FlipCards = () => {
   );
 };
 
-export default FlipCards;
+export default FocusSection;
