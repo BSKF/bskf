@@ -12,7 +12,7 @@ const HeroSection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/hero-background.mp4" type="video/mp4" />
+        <source src="https://wpzbzwidaqbbwcvhtcdw.supabase.co/storage/v1/object/public/herovideo/hero%20background.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
