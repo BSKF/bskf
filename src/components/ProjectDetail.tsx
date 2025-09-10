@@ -65,7 +65,7 @@ const ProjectDetail = () => {
     }
   };
 
-  const project = projectData[id as keyof typeof projectData];
+  const project = projectData[Number(id) as keyof typeof projectData];
 
   if (!project) {
     return (
