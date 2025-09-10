@@ -10,28 +10,26 @@ const EventDetail = () => {
   
   const eventData = {
     1: {
-      title: "Organic Farming Workshop",
-      date: "March 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Punjab, India",
-      participants: 120,
+      title: "Waste to Wealth : Turn Farm Waste into Income",
+      date: "16th August - 20th August 2025",
+      time: "7:00 PM - 8:30 PM",
+      location: "Online",
+      participants: 23,
       status: "Completed",
-      description: "A comprehensive workshop on organic farming techniques and sustainable practices. This event brought together farmers, agricultural experts, and sustainability advocates to share knowledge and best practices in organic agriculture.",
+      description: "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. It also emphasized how such initiatives can reduce pollution, improve soil fertility, and contribute to a circular economy in agriculture.",
       agenda: [
-        "9:00 AM - Registration and Welcome",
-        "10:00 AM - Introduction to Organic Farming",
-        "11:30 AM - Soil Health Management",
-        "1:00 PM - Lunch Break",
-        "2:00 PM - Pest Management in Organic Systems",
-        "3:30 PM - Marketing Organic Products",
-        "4:30 PM - Q&A Session",
-        "5:00 PM - Closing Remarks"
+        "7:00 PM - Registration",
+        "7:15 PM - Welcoming Guest Speakers",
+        "7:30 PM - Speech by Guest Speakers",
+        "8:15 PM- Q&A Session",
+        "8:30 PM - Closing Remarks"
       ],
       outcomes: [
-        "120 farmers trained in organic techniques",
-        "50 soil samples tested for health assessment",
-        "15 new organic certification applications",
-        "3 farmer cooperatives formed"
+        "16th August 2025 ~ Rethinking Agricultural Waste: Sustainable Solutions and Next-Gen by DIPTANU BANIK",
+        "17th August 2025 ~ Black Soldier Fly Farming for Smart Waste Conversion  by DR. DEVINA SERAM",
+        "18th August 2025 ~ Vermicompost turning waste into Black Gold with Earthworms by DR. TARUN KUMAR",
+        "19th August 2025 ~ Composting: Mastering the Basics of Organic Composting by DR. SUSHANT SUKUMAR PATIL",
+        "20th August 2025 ~ Closing Ceremony by BSKF TEAM(Surbhi Srivastava, Subhajit Mukherjee, Swastik Mondal, Sakshi Mondal)",
       ],
       images: [
         "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -41,29 +39,54 @@ const EventDetail = () => {
       ]
     },
     2: {
-      title: "Biodiversity Conservation Summit",
-      date: "February 8, 2024",
-      time: "8:00 AM - 6:00 PM",
-      location: "Kerala, India",
-      participants: 200,
+      title: "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security ",
+      date: "28th March - 1st April 2025",
+      time: "7:00 PM - 8:30 PM",
+      location: "Online",
+      participants: 95,
       status: "Completed",
-      description: "Three-day summit focusing on preserving local biodiversity and traditional farming methods. The event featured presentations from leading researchers, field demonstrations, and interactive workshops on biodiversity conservation.",
+      description: "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
       agenda: [
-        "8:00 AM - Registration",
-        "9:00 AM - Opening Ceremony",
-        "10:00 AM - Keynote: Biodiversity Crisis",
-        "11:30 AM - Traditional Farming Methods",
-        "1:00 PM - Lunch Break",
-        "2:00 PM - Seed Conservation Techniques",
-        "3:30 PM - Field Demonstrations",
-        "5:00 PM - Panel Discussion",
-        "6:00 PM - Networking Session"
+        "7:00 PM - Registration",
+        "7:15 PM - Welcoming Guest Speakers",
+        "7:30 PM - Speech by Guest Speakers",
+        "8:15 PM- Q&A Session",
+        "8:30 PM - Closing Remarks"
       ],
       outcomes: [
-        "200 participants from 15 states",
-        "30 biodiversity conservation projects initiated",
-        "500 seed varieties documented",
-        "5 research collaborations established"
+        "28th April 2025 ~ Agroforestry for livelihood and environmental security in India by Dr. Sangram Chavan",
+        "29th April 2025 ~ Designing Synergistic Ecosystems: Principles of Food Forests & Agroforestry by Shihab Kunhahammed",
+        "30th April 2025 ~ Building Social Ventures from Local Produce Traditions & Forest Heritage by Shaik Imran Hussain Choudhary",
+        "1st May 2025 ~ From Farm to Market & Beyond. Building Sustainable value Chains by Shameek Chakravarty",
+        
+      ],
+      images: [
+        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    3: {
+      title: "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems ",
+      date: "25th January – 26th January 2025",
+      time: "7:00 PM - 8:30 PM",
+      location: "Online",
+      participants: 67,
+      status: "Completed",
+      description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. ",
+      agenda: [
+        "7:00 PM - Registration",
+        "7:15 PM - Welcoming Guest Speakers",
+        "7:30 PM - Speech by Guest Speakers",
+        "8:15 PM- Q&A Session",
+        "8:30 PM - Closing Remarks"
+      ],
+      outcomes: [
+        "25th January 2025 ~ Regenerative Agriculture: A Pathway to Climate Resilience and Sustainable Food Security",
+        "26th January 2025 ~ The Role of Technology and Innovation in Building Climate-Smart Agriculture",
+        
+        
       ],
       images: [
         "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -171,7 +194,7 @@ const EventDetail = () => {
               <CardHeader>
                 <CardTitle className="text-xl text-green-800 flex items-center gap-2">
                   <Award className="w-5 h-5" />
-                  Key Outcomes
+                  Speakers
                 </CardTitle>
               </CardHeader>
               <CardContent>

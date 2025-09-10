@@ -9,29 +9,29 @@ const Events = () => {
   const pastEvents = [
     {
       id: 1,
-      title: "Organic Farming Workshop",
-      date: "March 15, 2024",
-      location: "Punjab, India",
-      participants: 120,
-      description: "A comprehensive workshop on organic farming techniques and sustainable practices.",
+      title: "Waste to Wealth : Turn Farm Waste into Income",
+      date: "16th August - 20th August 2025",
+      location: "ONLINE",
+      participants: 23,
+      description: "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. ",
       image: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 2,
-      title: "Biodiversity Conservation Summit",
-      date: "February 8, 2024",
-      location: "Kerala, India",
-      participants: 200,
-      description: "Three-day summit focusing on preserving local biodiversity and traditional farming methods.",
+      title: "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security",
+      date: "28th March - 1st April 2025",
+      location: "Online",
+      participants: 95,
+      description: "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
       image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 3,
-      title: "Water Conservation Training",
-      date: "January 20, 2024",
-      location: "Rajasthan, India",
-      participants: 85,
-      description: "Training session on rainwater harvesting and efficient irrigation systems.",
+      title: "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems",
+      date: "25th January – 26th January 2025",
+      location: "Online",
+      participants: 67,
+      description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
