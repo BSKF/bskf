@@ -10,6 +10,10 @@ import EventsPage from "./pages/EventsPage";
 import About from "./pages/About";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import EventDetailPage from "./pages/EventDetailPage";
+import Login from "./pages/Login";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import AdminDashboard from "./pages/authPages/admin/AdminDashboard";
+import UserDashboard from "./pages/authPages/user/UserDashboard";
 
 const App = () => (
   <TooltipProvider>
@@ -23,6 +27,22 @@ const App = () => (
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:id" element={<EventDetailPage />} />
         <Route path="/about" element={<About />} />
+
+        {/* User Protected Section */}
+        <Route element={<ProtectedRoutes requiredRole="user" />}>
+          <Route path="/user/dashboard" element={<UserDashboard />} />
+          <Route path="/user/profile" element={<div>User Profile</div>} />
+        </Route>
+
+        {/* Admin Protected Section */}
+        <Route element={<ProtectedRoutes requiredRole="admin" />}>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/users" element={<div>Manage Users</div>} />
+        </Route>
+
+        <Route path="/unauthorized" element={<div>403 - Unauthorized</div>} />
+        <Route path="/login" element={<Login />} />
+
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

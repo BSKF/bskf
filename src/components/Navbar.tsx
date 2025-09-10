@@ -56,6 +56,7 @@ const Navbar = () => {
               { name: 'Projects', path: '/projects' },
               { name: 'Events', path: '/events' },
               { name: 'About', path: '/about' },
+              { name: 'Login', path: '/login' },
             ].map(({ name, path }) => (
               <button
                 key={name}
