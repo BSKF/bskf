@@ -56,9 +56,9 @@ const HeroSection = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
           {[
-            { icon: Users, end: 1000, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
+            { icon: Users, end: 3000, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
             { icon: Sprout, end: 50, suffix: '+', label: 'Projects', color: 'text-yellow-400' },
-            { icon: Heart, end: 15, suffix: '+', label: 'States', color: 'text-orange-700' },
+            { icon: Heart, end: 2, suffix: '+', label: 'States', color: 'text-orange-700' },
           ].map(({ icon: Icon, end, suffix, label, color }) => (
             <div
               key={label}
