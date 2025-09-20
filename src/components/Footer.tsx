@@ -106,7 +106,7 @@ const Footer = () => {
                 © 2025 Bangla Susthayi Krishi Foundation. All rights reserved.
               </p>
               <p className="text-green-300 text-sm">
-                Developed with ❤️ by <span className="font-semibold">Sumantra Bandyopadhyay</span>
+                Developed with ❤️ by <span className="font-semibold">BSKF Technical Team</span>
               </p>
             </div>
           </div>
