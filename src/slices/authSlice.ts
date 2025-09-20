@@ -65,6 +65,26 @@ export const createUser = createAsyncThunk(
   }
 );
 
+export const getProfile = createAsyncThunk(
+  "auth/getProfile",
+  async ({user_id}:{user_id:string}, { rejectWithValue }) => {
+    const token = localStorage.getItem("token");
+    try {
+      const response = await axiosInstance.get(`/records/profile/${user_id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          },
+        }
+      );
+      // console.log("Login response:", response.data);
+      return response.data; // expected: { user: { email, role }, token }
+    } catch (err: any) {
+      return rejectWithValue(err.response?.data?.message || "Login failed");
+    }
+  }
+);
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -120,6 +140,21 @@ const authSlice = createSlice({
         state.loading = false;
         state.error = action.payload as string;
         console.log("Create user failed:", action.payload);
+      });
+
+      builder
+      .addCase(getProfile.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getProfile.fulfilled, (state, action) => {
+        // console.log("Login fulfilled with payload:", action.payload.data.role);
+        state.loading = false;
+        state.currentUser = action.payload.data;
+      })
+      .addCase(getProfile.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload as string;
       });
     }
 });

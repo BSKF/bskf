@@ -26,7 +26,11 @@ const initialState: UsersState = {
 };
 
 export const getUsers = createAsyncThunk("users/getUsers", async () => {
-  const response = await axiosInstance.get("/records");
+  const response = await axiosInstance.get("/records", {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  });
   return response.data;
 });
 
@@ -42,6 +46,42 @@ export const getUserById = createAsyncThunk(
     return response.data;
   }
 );
+
+export const updateUsers = createAsyncThunk(
+  "users/updateUsers",
+  async (changedUsers: User[], { rejectWithValue }) => {
+    try{
+
+      const token = localStorage.getItem("token");
+      const response = await axiosInstance.put(`/records/`,changedUsers, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    }catch (err: any) {
+      return rejectWithValue(err.response?.data?.message || "Role Updation failed");
+    }
+  }
+)
+
+export const updateUser = createAsyncThunk(
+  "users/updateUser",
+  async ({changedUser, userId}:{changedUser: {middlename: string; address: string; phone_number: string;}, userId: string}, { rejectWithValue }) => {
+    try{
+
+      const token = localStorage.getItem("token");
+      const response = await axiosInstance.put(`/records/${userId}`,changedUser, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    }catch (err: any) {
+      return rejectWithValue(err.response?.data?.message || "Profile Updation failed");
+    }
+  }
+)
 
 export const usersSlice = createSlice({
   name: "users",
@@ -68,7 +108,8 @@ export const usersSlice = createSlice({
       })
       .addCase(getUsers.fulfilled, (state, action) => {
         state.loading = false;
-        state.users = action.payload;
+        // console.log("Fetched users:", action.payload.data);
+        state.users = action.payload.data;
       })
       .addCase(getUsers.rejected, (state, action) => {
         state.loading = false;

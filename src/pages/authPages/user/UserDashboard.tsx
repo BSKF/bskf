@@ -2,6 +2,7 @@ import { useState } from "react";
 import { User, PlusCircle, ClipboardCheck } from "lucide-react";
 import Sidebar from "../common/Sidebar";
 import Profile from "../common/Profile";
+import ViewTask from "./ViewTask";
 
 const UserDashboard = () => {
   const [active, setActive] = useState("view-profile");
@@ -21,7 +22,7 @@ const UserDashboard = () => {
           <Profile />
         )}
         {active === "view-task" && (
-          <div className="text-xl font-semibold">✅ View Task Section</div>
+          <ViewTask />
         )}
       </main>
     </div>

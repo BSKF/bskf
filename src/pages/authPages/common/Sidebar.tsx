@@ -1,4 +1,4 @@
-import { User, PlusCircle, ClipboardCheck } from "lucide-react";
+import { User, PlusCircle, ClipboardCheck, LogOut  } from "lucide-react";
 const Sidebar = ({ menuItems, setActive, active }) => {
     const handleLogout = () => {
         // Clear user session (e.g., remove token from localStorage)
@@ -29,7 +29,7 @@ const Sidebar = ({ menuItems, setActive, active }) => {
                     onClick={() => handleLogout()}
                     className={`w-full flex items-center gap-2 p-2 rounded-lg mt-4 bg-red-600 text-white hover:bg-red-700 transition`}
                 >
-                    <PlusCircle className="w-5 h-5" />
+                    <LogOut  className="w-5 h-5" />
                     Logout
                 </button>
             </nav>

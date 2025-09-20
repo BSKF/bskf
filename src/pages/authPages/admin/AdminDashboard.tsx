@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { User, PlusCircle, ClipboardCheck } from "lucide-react";
+import { User, PlusCircle, ClipboardCheck, ArrowRightLeft  } from "lucide-react";
 import Sidebar from "../common/Sidebar";
 import Profile from "../common/Profile";
 import CreateAccount from "./CreateAccount";
+import ChangeRole from "./ChangeRole";
+import CreateTask from "./CreateTask";
 
 const AdminDashboard = () => {
   const [active, setActive] = useState("view-profile");
@@ -10,6 +12,7 @@ const AdminDashboard = () => {
   const menuItems = [
     { id: "view-profile", label: "View Profile", icon: <User size={18} /> },
     { id: "create-account", label: "Create Account for User", icon: <PlusCircle size={18} /> },
+    { id: "change-role", label: "Change User Role", icon: <ArrowRightLeft size={18} /> },
     { id: "assign-task", label: "Assign Task to User", icon: <ClipboardCheck size={18} /> },
   ];
 
@@ -25,8 +28,11 @@ const AdminDashboard = () => {
         {active === "create-account" && (
           <CreateAccount />
         )}
+        {active === "change-role" && (
+          <ChangeRole />
+        )}
         {active === "assign-task" && (
-          <div className="text-xl font-semibold">✅ Assign Task Section</div>
+          <CreateTask />
         )}
       </main>
     </div>
