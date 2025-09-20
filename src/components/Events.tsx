@@ -37,33 +37,33 @@ const Events = () => {
   ];
 
   const upcomingEvents = [
-    {
-      id: 4,
-      title: "Seed Exchange Festival",
-      date: "July 22, 2024",
-      location: "Maharashtra, India",
-      participants: "Expected 300+",
-      description: "Annual festival celebrating traditional seeds and promoting seed sovereignty among farmers.",
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      id: 5,
-      title: "Climate Resilient Agriculture",
-      date: "August 10, 2024",
-      location: "Tamil Nadu, India",
-      participants: "Expected 150+",
-      description: "Workshop on adapting farming practices to climate change challenges.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      id: 6,
-      title: "Young Farmers Convention",
-      date: "September 5, 2024",
-      location: "Gujarat, India",
-      participants: "Expected 250+",
-      description: "Empowering the next generation of farmers with modern sustainable techniques.",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    }
+    // {
+    //   id: 4,
+    //   title: "Seed Exchange Festival",
+    //   date: "July 22, 2024",
+    //   location: "Maharashtra, India",
+    //   participants: "Expected 300+",
+    //   description: "Annual festival celebrating traditional seeds and promoting seed sovereignty among farmers.",
+    //   image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    // },
+    // {
+    //   id: 5,
+    //   title: "Climate Resilient Agriculture",
+    //   date: "August 10, 2024",
+    //   location: "Tamil Nadu, India",
+    //   participants: "Expected 150+",
+    //   description: "Workshop on adapting farming practices to climate change challenges.",
+    //   image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Young Farmers Convention",
+    //   date: "September 5, 2024",
+    //   location: "Gujarat, India",
+    //   participants: "Expected 250+",
+    //   description: "Empowering the next generation of farmers with modern sustainable techniques.",
+    //   image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    // }
   ];
 
   const EventCard = ({ event, isPast }: { event: any; isPast: boolean }) => (
@@ -135,11 +135,17 @@ const Events = () => {
           </TabsList>
           
           <TabsContent value="upcoming">
+            {upcomingEvents.length>0?(
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingEvents.map((event) => (
                 <EventCard key={event.id} event={event} isPast={false} />
               ))}
-            </div>
+            </div>):(
+              <div className='w-full flex justify-center text-4xl font-bold text-green-800 mb-4'>
+                Coming Soon
+              </div>
+            )
+            }
           </TabsContent>
           
           <TabsContent value="past">
