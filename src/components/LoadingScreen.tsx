@@ -47,7 +47,7 @@ const LoadingScreen = () => {
                   style={{
                     left: `${20 + i * 12}%`,
                     animationDelay: `${i * 0.2}s`,
-                    animationDuration: '2s'
+                    animationDuration: '1s'
                   }}
                 />
               ))}
