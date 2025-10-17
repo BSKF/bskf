@@ -10,11 +10,11 @@ const ImpactSection = () => {
   ];
 
   const places: Place[] = [
-    // { name: "Delhi", lat: 28.55, lon: 77.19 },
-    // { name: "Mumbai", lat: 19.07, lon: 72.88 },
-    // { name: "Chennai", lat: 13.08, lon: 80.27 },
-    // { name: "Kolkata", lat: 22.57, lon: 88.36 },
-    // { name: "Chandigarh", lat: 30.71, lon: 76.76 },
+    { name: "Delhi", lat: 28.55, lon: 77.19 },
+    { name: "Mumbai", lat: 19.07, lon: 72.88 },
+    { name: "Chennai", lat: 13.08, lon: 80.27 },
+    { name: "Kolkata", lat: 22.57, lon: 88.36 },
+    { name: "Chandigarh", lat: 30.71, lon: 76.76 },
   ];
 
 
@@ -56,17 +56,17 @@ const ImpactSection = () => {
             </div>
 
             {/* India Map with Activity Dots */}
-            <div className="relative bg-gray-400 rounded-2xl p-8 shadow-lg">
+            <div className="relative bg-white rounded-2xl p-8 shadow-lg">
               <div className="aspect-square w-full max-w-md mx-auto relative">
                 {/* India Map SVG */}
                 <img
-                  src="india.jpg"
+                  src="india_green.jpg"
                   alt="India Map"
                   className="w-full h-full object-contain rounded-lg"
                 />
                 <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-md">
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-yellow-300 rounded-full animate-pulse"></div>
                     <span>Active Projects</span>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const ImpactSection = () => {
                     <span
                       key={p.name}
                       title={p.name}
-                      className="absolute w-3 h-3 bg-green-500 rounded-full animate-pulse"
+                      className="absolute w-3 h-3 bg-yellow-300 rounded-full animate-pulse"
                       style={{
                         top: `${top}%`,
                         left: `${left}%`,
