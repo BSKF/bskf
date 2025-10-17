@@ -7,42 +7,42 @@ import { Link } from 'react-router-dom';
 
 const LiveProjects = () => {
   const liveProjects = [
-    {
-      id: 1,
-      title: "Organic Millet Revival",
-      location: "Karnataka & Tamil Nadu",
-      participants: "2,400 farmers",
-      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Reviving traditional millet cultivation to improve nutrition and soil health while providing sustainable income.",
-      progress: 75
-    },
-    {
-      id: 2,
-      title: "Water Conservation Initiative", 
-      location: "Rajasthan & Gujarat",
-      participants: "1,800 farmers",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Building community-managed water harvesting systems and promoting drought-resistant crop varieties.",
-      progress: 60
-    },
-    {
-      id: 3,
-      title: "Women Farmers Collective",
-      location: "Uttar Pradesh & Bihar", 
-      participants: "3,200 women",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Empowering women through collective farming, direct market access, and agricultural entrepreneurship training.",
-      progress: 85
-    },
-    {
-      id: 4,
-      title: "Climate-Smart Farming",
-      location: "Kerala & Goa",
-      participants: "1,200 farmers", 
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Implementing climate-resilient practices including agroforestry and integrated pest management.",
-      progress: 40
-    }
+    // {
+    //   id: 1,
+    //   title: "Organic Millet Revival",
+    //   location: "Karnataka & Tamil Nadu",
+    //   participants: "2,400 farmers",
+    //   image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   description: "Reviving traditional millet cultivation to improve nutrition and soil health while providing sustainable income.",
+    //   progress: 75
+    // },
+    // {
+    //   id: 2,
+    //   title: "Water Conservation Initiative", 
+    //   location: "Rajasthan & Gujarat",
+    //   participants: "1,800 farmers",
+    //   image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   description: "Building community-managed water harvesting systems and promoting drought-resistant crop varieties.",
+    //   progress: 60
+    // },
+    // {
+    //   id: 3,
+    //   title: "Women Farmers Collective",
+    //   location: "Uttar Pradesh & Bihar", 
+    //   participants: "3,200 women",
+    //   image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   description: "Empowering women through collective farming, direct market access, and agricultural entrepreneurship training.",
+    //   progress: 85
+    // },
+    // {
+    //   id: 4,
+    //   title: "Climate-Smart Farming",
+    //   location: "Kerala & Goa",
+    //   participants: "1,200 farmers", 
+    //   image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //   description: "Implementing climate-resilient practices including agroforestry and integrated pest management.",
+    //   progress: 40
+    // }
   ];
 
   const completedProjects = [
@@ -148,11 +148,17 @@ const LiveProjects = () => {
           </TabsList>
           
           <TabsContent value="live">
+            {liveProjects.length>0?(
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {liveProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} isLive={true} />
               ))}
-            </div>
+            </div>):(
+              <div className='w-full flex justify-center text-4xl font-bold text-green-800 mb-4'>
+                Coming Soon
+              </div>
+            )
+            }
           </TabsContent>
           
           <TabsContent value="completed">
