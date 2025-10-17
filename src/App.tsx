@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,8 @@ import EventsPage from "./pages/EventsPage";
 import About from "./pages/About";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import EventDetailPage from "./pages/EventDetailPage";
+import PublicationsPage from "./pages/PublicationsPage";
+import PublicationDetailPage from "./pages/PublicationDetailPage";
 import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import AdminDashboard from "./pages/authPages/admin/AdminDashboard";
@@ -27,7 +28,9 @@ const App = () => (
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:id" element={<EventDetailPage />} />
         <Route path="/about" element={<About />} />
-
+        {/* Publication Routes */}
+        <Route path="/publications" element={<PublicationsPage />} />
+        <Route path="/publications/:id" element={<PublicationDetailPage />} />
         {/* User Protected Section */}
         <Route element={<ProtectedRoutes requiredRole="user" />}>
           <Route path="/user/dashboard" element={<UserDashboard />} />
@@ -42,7 +45,6 @@ const App = () => (
 
         <Route path="/unauthorized" element={<div>403 - Unauthorized</div>} />
         <Route path="/login" element={<Login />} />
-
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
