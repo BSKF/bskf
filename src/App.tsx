@@ -28,6 +28,23 @@ const App = () => (
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:id" element={<EventDetailPage />} />
         <Route path="/about" element={<About />} />
+        {/* Publication Routes */}
+        <Route path="/publications" element={<PublicationsPage />} />
+        <Route path="/publications/:id" element={<PublicationDetailPage />} />
+        {/* User Protected Section */}
+        <Route element={<ProtectedRoutes requiredRole="user" />}>
+          <Route path="/user/dashboard" element={<UserDashboard />} />
+          <Route path="/user/profile" element={<div>User Profile</div>} />
+        </Route>
+
+        {/* Admin Protected Section */}
+        <Route element={<ProtectedRoutes requiredRole="admin" />}>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/users" element={<div>Manage Users</div>} />
+        </Route>
+
+        <Route path="/unauthorized" element={<div>403 - Unauthorized</div>} />
+        <Route path="/login" element={<Login />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

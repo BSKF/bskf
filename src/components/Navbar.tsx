@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: 'Events', path: '/events' },
     { name: 'About', path: '/about' },
     { name: 'Publications', path: '/publications' }, // Corrected spelling and path
+    { name: 'Login', path: '/login' },
   ];
 
   return (
