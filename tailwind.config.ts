@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate"; // <-- Import added here
 
 const config: Config = {
   darkMode: ["class"],
@@ -19,9 +20,12 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['"Libertinus Sans"', "sans-serif"], // Make Libertinus Sans default
+        sans: ['Poppins', '"Libertinus Sans"', "sans-serif"], // Assuming Poppins is default now
+        poppins: ['Poppins', 'sans-serif'], // Keep explicit definition
       },
       colors: {
+        'custom-yellow-bg': '#FFF4A4', // Added from previous step
+        'custom-grey-text': '#4E4E4E',  // Added from previous step
         'starbucks-green':'#006241',
         'natural-green':'#008000',
         'forest-green':'#228B50',
@@ -99,7 +103,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate], // <-- Changed require to the imported variable
 };
 
 export default config;

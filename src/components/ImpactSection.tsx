@@ -143,6 +143,10 @@ const ImpactSection: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Bottom section placeholder */}
+        <div className="h-[65%] w-full"></div>
+
       </div>
     </main>
   );
