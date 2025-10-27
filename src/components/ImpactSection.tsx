@@ -1,114 +1,56 @@
-type Place = { name: string; lat: number; lon: number };
-const ImpactSection = () => {
-  const stats = [
-    { number: "3,000+", label: "Farmers Empowered", icon: "👨‍🌾 " },
-    { number: "10+", label: "Events", icon: "🏘️" },
-    { number: "500", label: "Youth Empowered", icon: "🌾" },
-    { number: "150+", label: "Native Varieties Preserved", icon: "🌱" },
-    { number: "40%", label: "Income  Increased", icon: "📈" },
-    { number: "5+", label: "Projects", icon: "🗺️" }
-  ];
+import React from 'react';
 
-  const places: Place[] = [
-    { name: "Delhi", lat: 28.55, lon: 77.19 },
-    { name: "Mumbai", lat: 19.07, lon: 72.88 },
-    { name: "Chennai", lat: 13.08, lon: 80.27 },
-    { name: "Kolkata", lat: 22.57, lon: 88.36 },
-    { name: "Chandigarh", lat: 30.71, lon: 76.76 },
-  ];
+// Define paths relative to the public folder
+const indiaMapPath = "/impact_section_assets/india 1.svg";
+const imgCapsule1Path = "/impact_section_assets/imgCapsule1.svg";
+const imgCapsule2Path = "/impact_section_assets/imgCapsule2.svg";
+const imgCapsule3Path = "/impact_section_assets/imgCapsule3.svg";
 
-
-  const convertCoordinatesToPercent = (lat: number, lon: number) => {
-    const latN = 37.6;
-    const latNPers = 5.4;
-    const latS = 8.4;
-    const latSPers = 90.4;
-
-    const longE = 97.2;
-    const longEPers = 90.6;
-    const longW = 68.7;
-    const longWPers = 12.8;
-
-    const top =
-      latNPers +
-      ((latN - lat) / (latN - latS)) * (latSPers - latNPers);
-
-    const left =
-      longWPers +
-      ((lon - longW) / (longE - longW)) * (longEPers - longWPers);
-
-    return { top: +top.toFixed(2), left: +left.toFixed(2) };
-  };
-
+const ImpactSection: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-green-100 to-orange-100">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Map Side */}
-          <div className="relative">
-            <div className="text-center lg:text-left mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-                Our Impact Across India
-              </h2>
-              <p className="text-xl text-green-700">
-                Transforming rural landscapes from Kashmir to Kerala
-              </p>
-            </div>
+    // Main container - keeps w-screen
+    <main className="h-screen w-screen bg-custom-yellow-bg flex items-center relative overflow-hidden">
 
-            {/* India Map with Activity Dots */}
-            <div className="relative bg-white rounded-2xl p-8 shadow-lg">
-              <div className="aspect-square w-full max-w-md mx-auto relative">
-                {/* India Map SVG */}
-                <img
-                  src="india_green.jpg"
-                  alt="India Map"
-                  className="w-full h-full object-contain rounded-lg"
-                />
-                <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-md">
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-3 h-3 bg-yellow-300 rounded-full animate-pulse"></div>
-                    <span>Active Projects</span>
-                  </div>
-                </div>
-                {places.map((p) => {
-                  const { top, left } = convertCoordinatesToPercent(p.lat, p.lon);
-                  return (
-                    <span
-                      key={p.name}
-                      title={p.name}
-                      className="absolute w-3 h-3 bg-yellow-300 rounded-full animate-pulse"
-                      style={{
-                        top: `${top}%`,
-                        left: `${left}%`,
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+      {/* India Map */}
+      <img
+        src={indiaMapPath}
+        alt="Map of India"
+        className="h-[98%] absolute left-0 bottom-0 object-contain"
+      />
 
-          {/* Statistics Side */}
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-bold text-green-800 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-green-600 font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+      {/* Layer for Text Content - Removed w-screen */}
+      <div className="h-screen absolute top-0 left-0 flex flex-col w-full"> {/* Removed w-screen, added w-full */}
+
+        {/* Top section containing the text block */}
+        <div className="h-[35%] w-full flex justify-end items-start pt-[3vw] pr-[5vw] pb-[0.5vw] pl-[1vw]">
+
+          {/* Text Content Block */}
+          <div className="text-left">
+            <p className="font-poppins">
+              <span className="text-[1.7vw] font-medium text-custom-grey-text">
+                From the soil{' '}
+                <img className="h-[2.2vw] inline align-middle" src={imgCapsule1Path} alt="" />{' '}
+                beneath our feet to the supply chains that <br /> span the globe, we are rewiring the fundamentals of agriculture. <br />
+                <span className="text-[1.7vw] font-medium text-black">
+                  Our mission is to empower producers with the technology{' '}
+                  <img className="h-[2.2vw] inline align-middle" src={imgCapsule2Path} alt="" />{' '}
+                  <br /> to build a smarter, more sustainable{' '}
+                  <img className="h-[2.2vw] inline align-middle" src={imgCapsule3Path} alt="" />{' '}
+                  world. <br />
+                  <span className="text-[1.7vw] font-medium text-black block mt-[1.2vw]">
+                    The results tell the story of our impact:
+                  </span>
+                </span>
+              </span>
+            </p>
           </div>
         </div>
+
+        {/* Bottom section placeholder */}
+        <div className="h-[65%] w-full"></div>
+
       </div>
-    </section>
+    </main>
   );
 };
 
