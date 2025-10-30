@@ -114,3 +114,7 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}

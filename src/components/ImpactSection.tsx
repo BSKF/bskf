@@ -8,24 +8,26 @@ const imgCapsule3Path = "/impact_section_assets/imgCapsule3.svg";
 
 const ImpactSection: React.FC = () => {
   return (
-    // Main container - keeps w-screen
-    <main className="h-screen w-screen bg-custom-yellow-bg flex items-center relative overflow-hidden">
+    // Main container: Use w-full and explicitly hide horizontal overflow
+    <main className="h-screen w-full bg-custom-yellow-bg flex items-center relative overflow-x-hidden"> {/* Changed w-screen to w-full, added overflow-x-hidden */}
 
       {/* India Map */}
       <img
         src={indiaMapPath}
         alt="Map of India"
-        className="h-[98%] absolute left-0 bottom-0 object-contain"
+        className="h-[98%] absolute left-0 bottom-0 object-contain pointer-events-none" // Added pointer-events-none
       />
 
-      {/* Layer for Text Content - Removed w-screen */}
-      <div className="h-screen absolute top-0 left-0 flex flex-col w-full"> {/* Removed w-screen, added w-full */}
+      {/* Layer for Text Content */}
+      {/* Use w-full, ensure it's positioned correctly */}
+      <div className="h-screen absolute top-0 left-0 flex flex-col w-full pointer-events-none"> {/* Added w-full, pointer-events-none */}
 
         {/* Top section containing the text block */}
         <div className="h-[35%] w-full flex justify-end items-start pt-[3vw] pr-[5vw] pb-[0.5vw] pl-[1vw]">
 
           {/* Text Content Block */}
-          <div className="text-left">
+          {/* Added pointer-events-auto here so text/images inside are interactive if needed */}
+          <div className="text-left pointer-events-auto">
             <p className="font-poppins">
               <span className="text-[1.7vw] font-medium text-custom-grey-text">
                 From the soil{' '}
