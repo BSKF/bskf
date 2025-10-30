@@ -22,7 +22,7 @@ const ImpactSection: React.FC = () => {
       <img
         src={indiaMapPath}
         alt="Map of India"
-        className="h-[98%] absolute left-0 bottom-0 object-contain"
+        className="h-[98%] absolute left-0 bottom-0 object-contain pointer-events-none" // Added pointer-events-none
       />
 
       {/* Layer: Translated from `.layer` */}
