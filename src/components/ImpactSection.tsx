@@ -54,20 +54,27 @@ const ImpactSection = () => {
                 Transforming rural landscapes from Kashmir to Kerala
               </p>
             </div>
+          </div>
 
-            {/* India Map with Activity Dots */}
-            <div className="relative bg-gray-400 rounded-2xl p-8 shadow-lg">
-              <div className="aspect-square w-full max-w-md mx-auto relative">
-                {/* India Map SVG */}
-                <img
-                  src="india.jpg"
-                  alt="India Map"
-                  className="w-full h-full object-contain rounded-lg"
-                />
-                <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-md">
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span>Active Projects</span>
+          {/* Bottom Middle: Translated from `.bottomMiddle` */}
+          <div className="h-full w-[55%] flex flex-col">
+            {/* `.bottomMiddleTop` */}
+            <div className="w-full h-1/2 flex items-center justify-center p-[0.5vw]">
+              {/* `.incomeIncreased` */}
+              <div className="h-full w-1/2 mb-6">
+                <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">40%</h1>
+                <p className="font-semibold text-black">Income Increased</p>
+                <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">helped farmers to increase their income by 40%</p>
+                {/* `.testimonialsAndCTAButton` */}
+                <div className="w-full h-[40%] flex items-center justify-between mb-[0.5vw]">
+                  {/* `.testimonials` */}
+                  <div className="h-full w-[80%] bg-[#FED16A] rounded-[30px] mt-[0.5vw] flex justify-center p-[1vw] flex-col">
+                    <p className="text-[0.6vw] text-[#4E4E4E] italic">"Working with them was an absolute pleasure. They were professional, efficient, and delivered results that truly exceeded our expectations. We couldn't be happier!"</p>
+                    <p className="text-[0.6vw] text-[#4E4E4E] italic">-Anjali Bose</p>
+                  </div>
+                  {/* `.testimonialsCTAbtn` */}
+                  <div className="h-[5vw] w-[5vw] bg-[#386641] rounded-full flex items-center justify-center cursor-pointer">
+                    <img src={arrowImgPath} alt="arrow" />
                   </div>
                 </div>
                 {places.map((p) => {

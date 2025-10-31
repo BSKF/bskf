@@ -88,6 +88,10 @@
 }
 
 @layer base {
+  /* Ensure the html block is empty or doesn't have scroll-behavior */
+  html {
+  }
+  
   * {
     @apply border-border;
   }

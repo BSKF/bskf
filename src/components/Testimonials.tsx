@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 
@@ -27,8 +26,17 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-orange-50 to-green-50">
-      <div className="max-w-6xl mx-auto">
+    <section 
+      className="relative py-20 px-6 bg-gradient-to-b from-orange-300 to-[#FFF9A2]"
+      style={{ 
+        // backgroundImage: "url('/photo-1523900915245-5557bfc92a96.avif')" 
+      }}
+    >
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-orange-50/20 to-green-50/20 backdrop-blur-sm"></div> */}
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
             Voices from the Fields
@@ -39,7 +47,7 @@ const Testimonials = () => {
         </div>
 
         <div className="relative">
-          <Card className="max-w-4xl mx-auto shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
+          <Card className="max-w-4xl mx-auto shadow-2xl border-2 border-green-700 bg-white/90 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <div className="order-2 md:order-1 text-center">
@@ -76,6 +84,7 @@ const Testimonials = () => {
                     ? 'bg-green-600 scale-125' 
                     : 'bg-green-300 hover:bg-green-400'
                 }`}
+                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
