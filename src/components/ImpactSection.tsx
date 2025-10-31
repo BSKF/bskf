@@ -1,58 +1,72 @@
-type Place = { name: string; lat: number; lon: number };
-const ImpactSection = () => {
-  const stats = [
-    { number: "3,000+", label: "Farmers Empowered", icon: "👨‍🌾 " },
-    { number: "10+", label: "Events", icon: "🏘️" },
-    { number: "500", label: "Youth Empowered", icon: "🌾" },
-    { number: "150+", label: "Native Varieties Preserved", icon: "🌱" },
-    { number: "40%", label: "Income  Increased", icon: "📈" },
-    { number: "5+", label: "Projects", icon: "🗺️" }
-  ];
+import React from 'react';
 
-  const places: Place[] = [
-    // { name: "Delhi", lat: 28.55, lon: 77.19 },
-    // { name: "Mumbai", lat: 19.07, lon: 72.88 },
-    // { name: "Chennai", lat: 13.08, lon: 80.27 },
-    // { name: "Kolkata", lat: 22.57, lon: 88.36 },
-    // { name: "Chandigarh", lat: 30.71, lon: 76.76 },
-  ];
+// Define paths relative to the public folder (as in your example)
+const indiaMapPath = "/impact_section_assets/india 1.svg";
+const imgCapsule1Path = "/impact_section_assets/imgCapsule1.svg";
+const imgCapsule2Path = "/impact_section_assets/imgCapsule2.svg";
+const imgCapsule3Path = "/impact_section_assets/imgCapsule3.svg";
+const farmersImgPath = "/impact_section_assets/Group 1000000938.svg";
+const arrowImgPath = "/impact_section_assets/Arrow 3.svg";
+const projectsImgPath = "/impact_section_assets/Group 1000000941.svg";
+const eventsImgPath = "/impact_section_assets/Group 1000000942.svg";
+const varietiesImgPath = "/impact_section_assets/Group 1000000944.svg";
+const eyesImgPath = "/impact_section_assets/eyesLeft.svg"; // Assuming this is the correct file for 'eyesLeft.svg'
 
-
-  const convertCoordinatesToPercent = (lat: number, lon: number) => {
-    const latN = 37.6;
-    const latNPers = 5.4;
-    const latS = 8.4;
-    const latSPers = 90.4;
-
-    const longE = 97.2;
-    const longEPers = 90.6;
-    const longW = 68.7;
-    const longWPers = 12.8;
-
-    const top =
-      latNPers +
-      ((latN - lat) / (latN - latS)) * (latSPers - latNPers);
-
-    const left =
-      longWPers +
-      ((lon - longW) / (longE - longW)) * (longEPers - longWPers);
-
-    return { top: +top.toFixed(2), left: +left.toFixed(2) };
-  };
-
+const ImpactSection: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-green-100 to-orange-100">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Map Side */}
-          <div className="relative">
-            <div className="text-center lg:text-left mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-                Our Impact Across India
-              </h2>
-              <p className="text-xl text-green-700">
-                Transforming rural landscapes from Kashmir to Kerala
-              </p>
+    // Main container: Translated from `main` tag
+    // Use `font-poppins` (requires setup in tailwind.config.js)
+    <main className="h-screen w-screen bg-[#FFF4A4] flex items-center relative overflow-x-hidden font-poppins">
+
+      {/* India Map: Translated from `.indian_map` */}
+      <img
+        src={indiaMapPath}
+        alt="Map of India"
+        className="h-[98%] absolute left-0 bottom-0 object-contain pointer-events-none" // Added pointer-events-none
+      />
+
+      {/* Layer: Translated from `.layer` */}
+      <div className="h-screen w-screen absolute top-0 left-0 flex flex-col">
+
+        {/* Top section: Translated from `.top` */}
+        <div className="h-[35%] w-full flex justify-end items-end pt-[3vw] pr-[5vw] pb-[0.5vw] pl-[1vw]">
+          <div className="text-left">
+            <p>
+              {/* `.greyColor` */}
+              <span className="text-[1.7vw] font-medium text-[#4E4E4E]">
+                From the soil{' '}
+                {/* `.imgCapsule` */}
+                <img className="h-[2.2vw] inline align-middle" src={imgCapsule1Path} alt="" />{' '}
+                beneath our feet to the supply chains that <br /> span the globe, we are rewiring the fundamentals of agriculture. <br />
+                {/* `.blackColor` */}
+                <span className="text-[1.7vw] font-medium text-black">
+                  Our mission is to empower producers with the technology{' '}
+                  <img className="h-[2.2vw] inline align-middle" src={imgCapsule2Path} alt="" />{' '}
+                  <br /> to build a smarter, more sustainable{' '}
+                  <img className="h-[2.2vw] inline align-middle" src={imgCapsule3Path} alt="" />{' '}
+                  world. <br />
+                  {/* `.para2` */}
+                  <span className="text-[1.7vw] font-medium text-black block mt-[1.2vw]">
+                    The results tell the story of our impact:
+                  </span>
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom section: Translated from `.bottom` */}
+        <div className="h-[calc(65%_-_1.5vw)] w-full flex mt-[1.5vw]">
+
+          {/* Bottom Left: Translated from `.bottomLeft` */}
+          <div className="h-[70%] w-[25%] border-r-[1.5px] border-black p-[1vw] flex justify-end">
+            {/* `.farmersEmpoweredBox` */}
+            <div className="w-[70%] h-fit flex flex-col text-[#313131]">
+              <h1 className="text-[5vw] font-semibold leading-none">3000+</h1>
+              <p className="font-semibold text-black">Farmers Empowered</p>
+              {/* `.farmersEmpoweredTag` */}
+              <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">helped farmers to tackle their problem across the country</p>
+              <img src={farmersImgPath} alt="" className="h-[4vw] w-[6.5vw] mt-[1vw]" />
             </div>
           </div>
 
@@ -61,7 +75,7 @@ const ImpactSection = () => {
             {/* `.bottomMiddleTop` */}
             <div className="w-full h-1/2 flex items-center justify-center p-[0.5vw]">
               {/* `.incomeIncreased` */}
-              <div className="h-full w-1/2 mb-6">
+              <div className="h-full w-1/2 mb-7">
                 <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">40%</h1>
                 <p className="font-semibold text-black">Income Increased</p>
                 <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">helped farmers to increase their income by 40%</p>
@@ -77,45 +91,64 @@ const ImpactSection = () => {
                     <img src={arrowImgPath} alt="arrow" />
                   </div>
                 </div>
-                {places.map((p) => {
-                  const { top, left } = convertCoordinatesToPercent(p.lat, p.lon);
-                  return (
-                    <span
-                      key={p.name}
-                      title={p.name}
-                      className="absolute w-3 h-3 bg-green-500 rounded-full animate-pulse"
-                      style={{
-                        top: `${top}%`,
-                        left: `${left}%`,
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    />
-                  );
-                })}
+              </div>
+            </div>
+            {/* `.bottomMiddleBottom` */}
+            <div className="w-full h-1/2 flex">
+              {/* `.projectsSection` */}
+              <div className="h-full w-[60%] p-[0.5vw]">
+                {/* `.projectNumbers` */}
+                <div className="flex gap-[0.5vw]">
+                  {/* `.nationalProjects` */}
+                  <div className="h-fit w-fit flex items-center justify-center">
+                    <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">15+</h1>
+                    <h3 className="font-semibold text-[#4E4E4E]">National</h3>
+                  </div>
+                  {/* `.internationalProjects` */}
+                  <div className="h-fit w-fit flex items-center justify-center">
+                    <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">, 1+</h1>
+                    <h3 className="font-semibold text-[#4E4E4E]">International✈️</h3>
+                  </div>
+                </div>
+                <p className="font-semibold">Projects are launched</p>
+                <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">creating impact through out the country through our projects</p>
+                <img src={projectsImgPath} alt="" className="w-[5vw] mt-[1vw]" />
+              </div>
+              {/* `.eventsOrganizedSection` */}
+              <div className="w-[40%] h-full p-[0.5vw_1vw_0.5vw_2vw] border-l-[1.5px] border-black flex flex-col items-center justify-center">
+                <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">10+</h1>
+                <p className="font-semibold">Events Organized</p>
+                <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">hosted various events across the country</p>
+                <img src={eventsImgPath} alt="" className="w-[5vw] mt-[1vw]" />
               </div>
             </div>
           </div>
 
-          {/* Statistics Side */}
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-bold text-green-800 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-green-600 font-medium">
-                  {stat.label}
-                </div>
+          {/* Bottom Right: Translated from `.bottomRight` */}
+          <div className="h-full w-[20%]">
+            {/* `.nativeVaritiesPreserved` */}
+            <div className="h-[70%] w-full p-[1vw] border-l-[1.5px] border-black">
+              <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">150+</h1>
+              <p className="font-semibold">Native Varities Preserved</p>
+              <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">Leading agriculture through technology and innovation</p>
+              <img src={varietiesImgPath} alt="" className="w-[5vw] mt-[1vw]" />
+              {/* `.seemorediv` */}
+              <div className="h-fit w-fit flex items-center justify-center gap-[1vw] mt-[1vw]">
+                {/* `.pusblicationSeemore` */}
+                <button className="border-none bg-[#F97A00] px-[2vw] py-[1vw] rounded-[30px]">
+                  <a href="#" className="no-underline text-white font-semibold">See more</a>
+                </button>
+                <img src={eyesImgPath} alt="" className="h-[3vw] w-[3vw] mt-0" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
+
+        {/* Bottom section placeholder */}
+        <div className="h-[65%] w-full"></div>
+
       </div>
-    </section>
+    </main>
   );
 };
 

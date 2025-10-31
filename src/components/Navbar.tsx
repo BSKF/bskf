@@ -25,7 +25,7 @@ const Navbar = () => {
     { name: 'Events', path: '/events' },
     { name: 'Publications', path: '/publications' },
     { name: 'Contact', path: '/#contact' },
-    { name: 'Login', path: '/login' },
+    // { name: 'Login', path: '/login' },
   ];
 
   // Common class names for nav buttons/links
