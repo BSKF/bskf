@@ -75,7 +75,7 @@ const ImpactSection: React.FC = () => {
             {/* `.bottomMiddleTop` */}
             <div className="w-full h-1/2 flex items-center justify-center p-[0.5vw]">
               {/* `.incomeIncreased` */}
-              <div className="h-full w-1/2 border-b-[1.5px] border-black">
+              <div className="h-full w-1/2 mb-7">
                 <h1 className="text-[5vw] font-semibold leading-none text-[#313131]">40%</h1>
                 <p className="font-semibold text-black">Income Increased</p>
                 <p className="text-[0.6vw] text-[#5d5c5c] mt-[0.3vw]">helped farmers to increase their income by 40%</p>

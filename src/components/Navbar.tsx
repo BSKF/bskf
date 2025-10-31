@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // Import Link and useLocation
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
+  const location = useLocation(); // Get current location
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const onScroll = () => {
@@ -15,18 +16,68 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (path: string) => {
-    navigate(path);
-    setIsMenuOpen(false);
-  };
-
+  // Updated navLinks to include hash links for homepage sections
   const navLinks = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/#home' },
+    { name: 'About', path: '/about' },
+    { name: 'Impact', path: '/#impact' },
     { name: 'Projects', path: '/projects' },
     { name: 'Events', path: '/events' },
-    { name: 'About', path: '/about' },
-    { name: 'Publications', path: '/publications' }, // Corrected spelling and path
+    { name: 'Publications', path: '/publications' },
+    { name: 'Contact', path: '/#contact' },
+    // { name: 'Login', path: '/login' },
   ];
+
+  // Common class names for nav buttons/links
+  const navButtonClasses = (isScrolled: boolean) =>
+    `text-lg font-sans font-semibold select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded transition-colors duration-200 ${
+      isScrolled
+        ? 'text-green-900 hover:text-green-600'
+        : 'text-white drop-shadow hover:text-green-300'
+    }`;
+  
+  // Common class names for mobile nav buttons/links
+  const mobileNavButtonClasses = (isScrolled: boolean) =>
+    `transition-colors duration-200 text-left text-lg font-sans font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded ${
+      isScrolled ? 'text-green-900' : 'text-white'
+    }`;
+
+  // Helper to render the correct link type
+  const renderNavLink = (name: string, path: string, isMobile: boolean) => {
+    const classes = isMobile ? mobileNavButtonClasses(scrolled) : navButtonClasses(scrolled);
+    const isHashLink = path.startsWith('/#');
+    const hash = path.split('#')[1] || '';
+
+    if (isHashLink && isHomePage) {
+      // We are on the homepage and it's a hash link. Use <a> for CSS smooth scroll.
+      return (
+        <a
+          key={name}
+          href={`#${hash}`}
+          className={classes}
+          onClick={() => setIsMenuOpen(false)}
+          aria-label={`Navigate to ${name} section`}
+        >
+          {name}
+        </a>
+      );
+    }
+    
+    // It's a page link (e.g., /about) OR a hash link from another page.
+    // Use React Router's <Link> component.
+    return (
+      <Link
+        key={name}
+        to={path}
+        onClick={() => setIsMenuOpen(false)}
+        className={classes}
+        aria-label={`Navigate to ${name}`}
+      >
+        {name}
+      </Link>
+    );
+  };
+
 
   return (
     <nav
@@ -39,15 +90,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Site Name */}
-          <div
+          <Link
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
             className="flex items-center space-x-3 cursor-pointer select-none"
-            onClick={() => handleNavClick('/')}
             aria-label="Go to homepage"
-            role="button"
-            tabIndex={0}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') handleNavClick('/');
-            }}
           >
             <img
               src="/Logo.png"
@@ -62,25 +109,11 @@ const Navbar = () => {
             >
               BSKF
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center space-x-8 font-sans font-semibold select-none`}>
-            {navLinks.map(({ name, path }) => (
-              <button
-                key={name}
-                onClick={() => handleNavClick(path)}
-                className={`text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded transition-colors duration-200
-                  ${
-                    scrolled
-                      ? 'text-green-900 hover:text-green-600'
-                      : 'text-white drop-shadow hover:text-green-300'
-                  }`}
-                aria-label={`Navigate to ${name}`}
-              >
-                {name}
-              </button>
-            ))}
+          <div className={`hidden md:flex items-center space-x-8`}>
+            {navLinks.map(({ name, path }) => renderNavLink(name, path, false))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,21 +135,8 @@ const Navbar = () => {
               scrolled ? 'bg-white/90' : 'bg-black/70'
             }`}
           >
-            <div
-              className={`flex flex-col space-y-4 px-4 py-4 font-sans font-semibold ${
-                scrolled ? 'text-green-900' : 'text-white'
-              }`}
-            >
-              {navLinks.map(({ name, path }) => (
-                <button
-                  key={name}
-                  onClick={() => handleNavClick(path)}
-                  className="transition-colors duration-200 text-left text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded"
-                  aria-label={`Navigate to ${name}`}
-                >
-                  {name}
-                </button>
-              ))}
+            <div className="flex flex-col space-y-4 px-4 py-4">
+              {navLinks.map(({ name, path }) => renderNavLink(name, path, true))}
             </div>
           </div>
         )}

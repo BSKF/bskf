@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const cardColors = [
-  { bg: "bg-starbucks-green", border: "border-yellow-600" },
-  { bg: "bg-natural-green", border: "border-yellow-300" },
+  { bg: "bg-forest-green", border: "border-yellow-200" },
+  { bg: "bg-yellow-green", border: "border-yellow-600" },
   { bg: "bg-forest-green", border: "border-yellow-200" },
   { bg: "bg-yellow-green", border: "border-yellow-600" },
 ];
