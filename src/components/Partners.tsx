@@ -26,7 +26,7 @@ const Partners = () => {
                 {partners
                   .filter(partner => partner.type === category)
                   .map((partner, index) => (
-                    <Card key={index} className="p-4 bg-white/80 backdrop-blur-sm w-36 h-36 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
+                    <Card key={index} className="p-4 bg-white/80 border-green-900 backdrop-blur-sm w-36 h-36 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
                       <div className="flex flex-col items-center space-y-2">
                         <img 
                           src={partner.logo} 
