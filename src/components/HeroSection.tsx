@@ -43,7 +43,7 @@ const HeroSection = () => {
             <Linkedin className="h-6 w-6 text-green-900" />
           </a>
           <a
-            href="https://www.instagram.com/susthayi.krishi.foundation"
+            href="https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white/70 backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
