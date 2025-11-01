@@ -217,7 +217,7 @@ const EnquiryForm = () => {
                     )}
                   />
 
-                  <div className="text-right">
+                  <div className="text-center">
                     <Button
                       type="submit"
                       className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 h-12 rounded-full text-base font-medium transition-all duration-300 transform hover:scale-105"
