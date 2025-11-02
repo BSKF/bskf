@@ -20,11 +20,12 @@ const ImpactSection: React.FC = () => {
         alt="Map of India"
         className="
           absolute
-          bottom-0
+          top-7
           left-1/2
           -translate-x-1/2
           md:left-0 md:translate-x-0
           object-contain
+          h-[100vh]
           w-[90vw] md:w-[45vw]
           opacity-40 md:opacity-60
           pointer-events-none
@@ -92,7 +93,7 @@ const ImpactSection: React.FC = () => {
         <div className="md:w-[55%] flex flex-col items-center md:items-start p-4 md:p-[0.5vw]">
           {/* Income Increased */}
           <div className="w-full mb-6">
-            <h1 className="text-4xl md:text-[5vw] font-semibold text-[#313131]">
+            <h1 className="text-4xl md:text-[5vw] font-semibold text-[#313131] mb-5">
               40%
             </h1>
             <p className="font-semibold text-black">Income Increased</p>
@@ -133,7 +134,7 @@ const ImpactSection: React.FC = () => {
                   </h3>
                 </div>
               </div>
-              <p className="font-semibold">Projects are launched</p>
+              <p className="font-semibold mt-5">Projects are launched</p>
               <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
                 creating impact throughout the country through our projects
               </p>
@@ -148,7 +149,7 @@ const ImpactSection: React.FC = () => {
               <h1 className="text-3xl md:text-[5vw] font-semibold text-[#313131]">
                 10+
               </h1>
-              <p className="font-semibold">Events Organized</p>
+              <p className="font-semibold mt-5">Events Organized</p>
               <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
                 hosted various events across the country
               </p>
@@ -166,7 +167,7 @@ const ImpactSection: React.FC = () => {
           <h1 className="text-4xl md:text-[5vw] font-semibold text-[#313131]">
             150+
           </h1>
-          <p className="font-semibold">Native Varieties Preserved</p>
+          <p className="font-semibold mt-5">Native Varieties Preserved</p>
           <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
             Leading agriculture through technology and innovation
           </p>
