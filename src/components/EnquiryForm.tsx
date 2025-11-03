@@ -93,7 +93,7 @@ const EnquiryForm = () => {
           </p>
         </div>
 
-        <Card className="bg-white/70 backdrop-blur-sm shadow-2xl border-0 overflow-hidden border-2 border-green-700">
+        <Card className="bg-white/30 backdrop-blur-sm shadow-2xl border-0 overflow-hidden border-2 border-green-700">
           <h3 className="text-1xl md:text-4xl font-bold text-green-800 mb-5 mt-4 text-center">
             Enquiry Form
           </h3>

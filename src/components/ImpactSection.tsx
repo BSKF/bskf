@@ -38,27 +38,27 @@ const ImpactSection: React.FC = () => {
         <div className="text-left max-w-[90%] md:max-w-[70%]">
           <p className="text-sm md:text-[1.7vw] text-[#4E4E4E] font-medium leading-relaxed">
             From the soil{" "}
-            <img
+            {/* <img
               className="h-4 md:h-[2.2vw] inline align-middle"
               src={imgCapsule1Path}
               alt=""
-            />{" "}
+            />{" "} */}
             beneath our feet to the supply chains that span the globe, we are
             rewiring the fundamentals of agriculture.
             <br />
             <span className="text-black">
               Our mission is to empower producers with the technology{" "}
-              <img
+              {/* <img
                 className="h-4 md:h-[2.2vw] inline align-middle"
                 src={imgCapsule2Path}
                 alt=""
-              />{" "}
+              />{" "} */}
               to build a smarter, more sustainable{" "}
-              <img
+              {/* <img
                 className="h-4 md:h-[2.2vw] inline align-middle"
                 src={imgCapsule3Path}
                 alt=""
-              />{" "}
+              />{" "} */}
               world.
               <br />
               <span className="block mt-4 md:mt-[1.2vw]">
@@ -78,7 +78,7 @@ const ImpactSection: React.FC = () => {
               3000+
             </h1>
             <p className="font-semibold text-black">Farmers Empowered</p>
-            <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
+            <p className="text-xs md:text-[0.6vw] text-[#333333] mt-1">
               helped farmers to tackle their problem across the country
             </p>
             <img
@@ -97,7 +97,7 @@ const ImpactSection: React.FC = () => {
               40%
             </h1>
             <p className="font-semibold text-black">Income Increased</p>
-            <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
+            <p className="text-xs md:text-[0.6vw] text-[#333333] mt-1">
               helped farmers to increase their income by 40%
             </p>
 
@@ -116,8 +116,8 @@ const ImpactSection: React.FC = () => {
           </div>
 
           {/* Projects + Events */}
-          <div className="w-full flex flex-col sm:flex-row border-t md:border-t-0">
-            <div className="w-full sm:w-[60%] p-2 md:p-[0.5vw]">
+          <div className="w-full flex flex-col sm:flex-row border-t md:border-t-0 border-t-black">
+            <div className="w-full sm:w-[60%] p-2 md:p-[0.5vw] mb-6 mt-5">
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <div className="flex items-center gap-1">
                   <h1 className="text-3xl md:text-[5vw] font-semibold text-[#313131]">
@@ -130,14 +130,16 @@ const ImpactSection: React.FC = () => {
                     1+
                   </h1>
                   <h3 className="font-semibold text-[#4E4E4E]">
-                    International ✈️
+                    International
                   </h3>
                 </div>
               </div>
-              <p className="font-semibold mt-5">Projects are launched</p>
-              <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
-                creating impact throughout the country through our projects
-              </p>
+              <div className="text-center md:text-left">
+                <p className="font-semibold mt-5">Projects are launched</p>
+                <p className="text-xs md:text-[0.6vw] text-[#333333] mt-1">
+                  creating impact throughout the country through our projects
+                </p>
+              </div>
               <img
                 src={projectsImgPath}
                 alt=""
@@ -150,7 +152,7 @@ const ImpactSection: React.FC = () => {
                 10+
               </h1>
               <p className="font-semibold mt-5">Events Organized</p>
-              <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
+              <p className="text-xs md:text-[0.6vw] text-[#333333] mt-1">
                 hosted various events across the country
               </p>
               <img
@@ -168,7 +170,7 @@ const ImpactSection: React.FC = () => {
             150+
           </h1>
           <p className="font-semibold mt-5">Native Varieties Preserved</p>
-          <p className="text-xs md:text-[0.6vw] text-[#5d5c5c] mt-1">
+          <p className="text-xs md:text-[0.6vw] text-[#333333] mt-1">
             Leading agriculture through technology and innovation
           </p>
           <img
@@ -180,7 +182,7 @@ const ImpactSection: React.FC = () => {
             <button className="bg-[#F97A00] px-4 py-2 md:px-[2vw] md:py-[1vw] rounded-[30px] text-white font-semibold text-sm">
               See more
             </button>
-            <img src={eyesImgPath} alt="" className="h-8 md:h-[3vw]" />
+            {/* <img src={eyesImgPath} alt="" className="h-8 md:h-[3vw]" /> */}
           </div>
         </div>
       </div>

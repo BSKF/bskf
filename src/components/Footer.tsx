@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 mr-2 mt-1 text-black" />
-                  <span className="text-black text-sm">Bankura,West Bengal,India</span>
+                  <span className="text-black text-sm">Bankura, West Bengal, India</span>
                 </div>
               </div>
             </div>
