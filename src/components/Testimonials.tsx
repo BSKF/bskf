@@ -67,7 +67,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-            Voices from the Fields
+            TESTIMONIALS
           </h2>
           <p className="text-lg text-green-600">
             Real stories from farmers whose lives have been transformed

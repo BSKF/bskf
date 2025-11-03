@@ -21,13 +21,13 @@ const Partners = () => {
         <div className="flex flex-wrap justify-center gap-6">
           {['Corporate'].map((category) => (
             <div key={category} className="text-center">
-              <h3 className="font-semibold text-green-800 mb-4">{category}</h3>
+              {/* <h3 className="font-semibold text-green-800 mb-4">{category}</h3> */}
               <div className="space-y-3">
                 {partners
                   .filter(partner => partner.type === category)
                   .map((partner, index) => (
-                    <Card key={index} className="p-4 bg-white/80 border-green-900 backdrop-blur-sm w-36 h-36 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
-                      <div className="flex flex-col items-center space-y-2">
+                    <Card key={index} className="p-4 bg-white/80 border-green-900 backdrop-blur-sm w-48 h-48 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
+                      <div className="flex flex-col items-center justify-center space-y-2 h-full">
                         <img 
                           src={partner.logo} 
                           alt={`${partner.name} Logo`} 

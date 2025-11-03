@@ -27,7 +27,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-4xl font-semibold mb-8 text-yellow-400 max-w-3xl mx-auto leading-relaxed font-sans">
+        <p className="text-xl md:text-4xl font-semibold mb-8 text-[#FED16A] max-w-3xl mx-auto leading-relaxed font-sans">
           Empowering farmers across India through sustainable practices and community support
         </p>
 
@@ -37,19 +37,19 @@ const HeroSection = () => {
             href="https://www.linkedin.com/company/susthayi-krishi-foundation/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/70 backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
+            className="bg-[#134d1f] backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center border-2"
             aria-label="LinkedIn"
           >
-            <Linkedin className="h-6 w-6 text-green-900" />
+            <Linkedin className="h-6 w-6 text-blue-500" />
           </a>
           <a
             href="https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ=="
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/70 backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
+            className="bg-[#134d1f] backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center border-2"
             aria-label="Instagram"
           >
-            <Instagram className="h-6 w-6 text-pink-600" />
+            <Instagram className="h-6 w-6 text-pink-500" />
           </a>
         </div>
 
@@ -57,8 +57,8 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
           {[
             { icon: Users, end: 3000, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
-            { icon: Sprout, end: 50, suffix: '+', label: 'Projects', color: 'text-yellow-400' },
-            { icon: Heart, end: 2, suffix: '+', label: 'States', color: 'text-orange-700' },
+            { icon: Sprout, end: 50, suffix: '+', label: 'Projects', color: 'text-green-800' },
+            { icon: Heart, end: 150, suffix: '+', label: 'Native Varities Preserved', color: 'text-green-800' },
           ].map(({ icon: Icon, end, suffix, label, color }) => (
             <div
               key={label}
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <div className={`text-4xl font-extrabold ${color} mb-2`}>
                 <CountUp start={1} end={end} duration={2} suffix={suffix} />
               </div>
-              <div className="text-xl font-semibold text-green-100">{label}</div>
+              <div className="text-xl font-semibold text-green-800">{label}</div>
             </div>
           ))}
         </div>
