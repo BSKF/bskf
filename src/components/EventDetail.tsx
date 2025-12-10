@@ -32,10 +32,14 @@ const EventDetail = () => {
         "20th August 2025 ~ Closing Ceremony by BSKF TEAM(Surbhi Srivastava, Subhajit Mukherjee, Swastik Mondal, Sakshi Mondal)",
       ],
       images: [
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "/WTW1.jpg",
+        "/WTW2.jpg",
+        "/WTW3.jpg",
+        "/WTW4.jpg",
+        "/WTW5.jpg",
+        "/WTW6.jpg"
+
+        
       ]
     },
     2: {
@@ -61,10 +65,12 @@ const EventDetail = () => {
         
       ],
       images: [
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "/BR1.jpg",
+        "/BR2.jpg",
+        "/BR3.jpg",
+        "/BR4.jpg",
+        "/BR5.jpg",
+
       ]
     },
     3: {
@@ -89,10 +95,10 @@ const EventDetail = () => {
         
       ],
       images: [
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "/TA1.jpg",
+        "/TA2.jpg",
+        "/TA3.jpg",
+        "/TA4.jpg",
       ]
     }
   };
