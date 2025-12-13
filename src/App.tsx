@@ -1,27 +1,30 @@
-import { useEffect } from "react"; // <-- Import useEffect
+import { useEffect } from "react"; 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Projects from "./pages/Projects";
+
+import ProjectsPage from "./pages/ProjectsPage";   // ✅ FIXED
+import ProjectDetailPage from "./pages/ProjectDetailPage"; // already correct
+
 import EventsPage from "./pages/EventsPage";
-import About from "./pages/About";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
 import EventDetailPage from "./pages/EventDetailPage";
+
+import About from "./pages/About";
+
 import PublicationsPage from "./pages/PublicationsPage";
 import PublicationDetailPage from "./pages/PublicationDetailPage";
 
 const App = () => {
-  // Add this hook to initialize the library
   useEffect(() => {
-    // Check if the script has loaded from the CDN
     if (typeof SmoothScroll !== "undefined") {
       new SmoothScroll('a[href*="#"]', {
-        speed: 1000, // Speed in milliseconds (1000ms = 1 second)
+        speed: 1000,
         speedAsDuration: true,
-        offset: 80, // Offset for your fixed navbar (h-16 is 64px, 80 gives more space)
+        offset: 80,
       });
     }
   }, []);
@@ -33,16 +36,23 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/projects" element={<Projects />} />
+
+          {/* ✅ Project Routes */}
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
+
+          {/* Events */}
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:id" element={<EventDetailPage />} />
+
+          {/* About */}
           <Route path="/about" element={<About />} />
-          {/* Publication Routes */}
+
+          {/* Publications */}
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/publications/:id" element={<PublicationDetailPage />} />
-          {/* User Protected Section */}
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
