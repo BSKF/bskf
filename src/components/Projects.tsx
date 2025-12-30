@@ -27,19 +27,19 @@ const projectList = [
   {
     id: 3,
     title: "MycoSphere",
-    location: "Rajasthan & Gujarat",
-    participants: "1,800 farmers",
-    duration: "January 2023 - Ongoing",
-    status: "Active",
+    location: "School of Agriculture, Lovely Professional University (LPU).",
+    participants: "250",
+    duration: "1st March 2025",
+    status: "Completed",
     thumbnail: "/MS1.jpg",
   },
   {
     id: 4,
     title: "Hands on diversity",
-    location: "Rajasthan & Gujarat",
-    participants: "1,800 farmers",
-    duration: "January 2023 - Ongoing",
-    status: "Active",
+    location: "School of Agriculture, Lovely Professional University (LPU).",
+    participants: "300",
+    duration: "6th November 2024 - 8th November 2024" ,
+    status: "Completed",
     thumbnail: "/HOB6.jpg",
   }
 ];
@@ -49,7 +49,7 @@ const Projects = () => {
     <section className="py-20 bg-gradient-to-b from-green-50 to-orange-50 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-green-800 text-center mb-12">
-          Our Ongoing Projects
+          OUR PROJECTS
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

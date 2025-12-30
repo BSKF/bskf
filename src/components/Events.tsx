@@ -18,11 +18,11 @@ const Events = () => {
     },
     {
       id: 2,
-      title: "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security",
+      title: "Building Resilience: Food Forests, Agroforestry & Climate Solutions for Food Security",
       date: "28th March - 1st April 2025",
       location: "Online",
       participants: 95,
-      description: "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
+      description: "The ‘Building Resilience’ summit guided farmers, practitioners, and agri-enthusiasts in adopting food forests, agroforestry, agri-preneurship, and carbon credit models to strengthen climate resilience. The sessions showcased practical strategies, expert insights, and real-world applications that empowered participants to build sustainable livelihoods while enhancing food security and climate action.",
       image: "/BR1.jpg"
     },
     {
