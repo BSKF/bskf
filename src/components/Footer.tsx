@@ -1,5 +1,14 @@
-import { Card } from '@/components/ui/card';
-import { Youtube, Linkedin, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Card } from "@/components/ui/card";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+  Youtube,
+  Linkedin,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -31,7 +40,8 @@ const Footer = () => {
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4 mt-5">Bangla Susthayi Krishi Foundation</h3>
               <p className="text-black mb-6 leading-relaxed">
-                Empowering farmers across India and developing rural communities through sustainable agricultural practices.
+                Empowering farmers across India and developing rural communities
+                through sustainable agricultural practices.
               </p>
               <div className="flex space-x-4">
                 {/*<a 
@@ -42,21 +52,31 @@ const Footer = () => {
                 >
                   <Youtube className="h-5 w-5" />
                 </a>*/}
-                <a 
-                  href="https://www.linkedin.com/company/susthayi-krishi-foundation/" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/company/susthayi-krishi-foundation/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-700 p-3 rounded-full hover:bg-blue-400 text-blue-200 border-blue-950 border transition-colors"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <FaLinkedin className="h-6 w-6 text-blue-500" />
+                  {/* <Linkedin className="h-6 w-6 text-blue-500" /> */}
                 </a>
-                <a 
-                  href="https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ==" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ=="
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-pink-600 p-3 rounded-full hover:bg-violet-300 text-purple-900 border-purple-950 border transition-colors"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-6 w-6 text-pink-500" />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1CzQowPX4N/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#134d1f] backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook className="h-6 w-6  text-blue-500" />
                 </a>
                 {/*<a 
                   href="https://twitter.com/sustainable_ag" 
@@ -86,7 +106,9 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Mail className="h-4 w-4 mr-2 text-black" />
-                  <span className="text-black text-sm">official@bskf.org.in</span>
+                  <span className="text-black text-sm">
+                    official@bskf.org.in
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-4 w-4 mr-2 text-black" />
@@ -94,7 +116,9 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 mr-2 mt-1 text-black" />
-                  <span className="text-black text-sm">Bankura, West Bengal, India</span>
+                  <span className="text-black text-sm">
+                    Bankura, West Bengal, India
+                  </span>
                 </div>
               </div>
             </div>
