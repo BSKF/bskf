@@ -1,5 +1,6 @@
 import { Users, Sprout, Heart, Linkedin, Instagram } from 'lucide-react';
 import CountUp from 'react-countup';
+import { FaFacebook , FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -40,7 +41,8 @@ const HeroSection = () => {
             className="bg-[#134d1f] backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center border-2"
             aria-label="LinkedIn"
           >
-            <Linkedin className="h-6 w-6 text-blue-500" />
+            <FaLinkedin className="h-6 w-6 text-blue-500"/>
+            {/* <Linkedin className="h-6 w-6 text-blue-500" /> */}
           </a>
           <a
             href="https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ=="
@@ -51,14 +53,23 @@ const HeroSection = () => {
           >
             <Instagram className="h-6 w-6 text-pink-500" />
           </a>
+          <a
+            href="https://www.facebook.com/share/1CzQowPX4N/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#134d1f] backdrop-blur-md p-4 rounded-full hover:scale-110 hover:ring-2 hover:ring-primaryGreen hover:shadow-xl transition-transform duration-300 flex items-center justify-center border-2"
+            aria-label="Facebook"
+          >
+            <FaFacebook className='h-6 w-6  text-blue-500' />
+          </a>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
           {[
-            { icon: Users, end: 3000, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
-            { icon: Sprout, end: 50, suffix: '+', label: 'Projects', color: 'text-green-800' },
-            { icon: Heart, end: 150, suffix: '+', label: 'Native Varities Preserved', color: 'text-green-800' },
+            { icon: Users, end: 200, suffix: '+', label: 'Farmer Members', color: 'text-green-800' },
+            { icon: Sprout, end: 5, suffix: '+', label: 'Projects', color: 'text-green-800' },
+            { icon: Heart, end: 50, suffix: '+', label: 'Seeds Preserved', color: 'text-green-800' },
           ].map(({ icon: Icon, end, suffix, label, color }) => (
             <div
               key={label}

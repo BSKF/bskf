@@ -1,13 +1,18 @@
-
-import { useParams } from 'react-router-dom';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Users, Clock, Award } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { useParams } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, Users, Clock, Award } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const EventDetail = () => {
   const { id } = useParams();
-  
+
   const eventData = {
     1: {
       title: "Waste to Wealth : Turn Farm Waste into Income",
@@ -16,13 +21,14 @@ const EventDetail = () => {
       location: "Online",
       participants: 23,
       status: "Completed",
-      description: "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. It also emphasized how such initiatives can reduce pollution, improve soil fertility, and contribute to a circular economy in agriculture.",
+      description:
+        "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. It also emphasized how such initiatives can reduce pollution, improve soil fertility, and contribute to a circular economy in agriculture.",
       agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
         "7:30 PM - Speech by Guest Speakers",
         "8:15 PM- Q&A Session",
-        "8:30 PM - Closing Remarks"
+        "8:30 PM - Closing Remarks",
       ],
       outcomes: [
         "16th August 2025 ~ Rethinking Agricultural Waste: Sustainable Solutions and Next-Gen by DIPTANU BANIK",
@@ -35,76 +41,83 @@ const EventDetail = () => {
         "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      ],
     },
     2: {
-      title: "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security ",
+      title:
+        "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security ",
       date: "28th March - 1st April 2025",
       time: "7:00 PM - 8:30 PM",
       location: "Online",
       participants: 95,
       status: "Completed",
-      description: "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
+      description:
+        "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
       agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
         "7:30 PM - Speech by Guest Speakers",
         "8:15 PM- Q&A Session",
-        "8:30 PM - Closing Remarks"
+        "8:30 PM - Closing Remarks",
       ],
       outcomes: [
         "28th April 2025 ~ Agroforestry for livelihood and environmental security in India by Dr. Sangram Chavan",
         "29th April 2025 ~ Designing Synergistic Ecosystems: Principles of Food Forests & Agroforestry by Shihab Kunhahammed",
         "30th April 2025 ~ Building Social Ventures from Local Produce Traditions & Forest Heritage by Shaik Imran Hussain Choudhary",
         "1st May 2025 ~ From Farm to Market & Beyond. Building Sustainable value Chains by Shameek Chakravarty",
-        
       ],
       images: [
         "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
+        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      ],
     },
     3: {
-      title: "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems ",
+      title:
+        "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems ",
       date: "25th January – 26th January 2025",
       time: "7:00 PM - 8:30 PM",
       location: "Online",
       participants: 67,
       status: "Completed",
-      description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. ",
+      description:
+        "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. ",
       agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
         "7:30 PM - Speech by Guest Speakers",
         "8:15 PM- Q&A Session",
-        "8:30 PM - Closing Remarks"
+        "8:30 PM - Closing Remarks",
       ],
       outcomes: [
         "25th January 2025 ~ Regenerative Agriculture: A Pathway to Climate Resilience and Sustainable Food Security",
         "26th January 2025 ~ The Role of Technology and Innovation in Building Climate-Smart Agriculture",
-        
-        
       ],
       images: [
         "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
-    }
+        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      ],
+    },
   };
 
-  const event = eventData[id as keyof typeof eventData];
+  const eventId = Number(id);
+
+  const event = eventData[eventId as keyof typeof eventData];
 
   if (!event) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Event Not Found</h2>
-          <p className="text-gray-600">The event you're looking for doesn't exist.</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Event Not Found
+          </h2>
+          <p className="text-gray-600">
+            The event you're looking for doesn't exist.
+          </p>
         </div>
       </div>
     );
@@ -118,9 +131,7 @@ const EventDetail = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
             {event.title}
           </h1>
-          <Badge className="bg-green-600 text-white mb-4">
-            {event.status}
-          </Badge>
+          <Badge className="bg-green-600 text-white mb-4">{event.status}</Badge>
         </div>
 
         {/* Event Info Cards */}
@@ -132,7 +143,7 @@ const EventDetail = () => {
               <p className="text-gray-600">{event.date}</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="p-6 text-center">
               <Clock className="w-8 h-8 text-green-600 mx-auto mb-2" />
@@ -140,7 +151,7 @@ const EventDetail = () => {
               <p className="text-gray-600">{event.time}</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="p-6 text-center">
               <MapPin className="w-8 h-8 text-green-600 mx-auto mb-2" />
@@ -148,7 +159,7 @@ const EventDetail = () => {
               <p className="text-gray-600">{event.location}</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="p-6 text-center">
               <Users className="w-8 h-8 text-green-600 mx-auto mb-2" />
@@ -163,7 +174,9 @@ const EventDetail = () => {
           {/* Description */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-green-800">Event Overview</CardTitle>
+              <CardTitle className="text-2xl text-green-800">
+                Event Overview
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -176,7 +189,9 @@ const EventDetail = () => {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl text-green-800">Event Agenda</CardTitle>
+                <CardTitle className="text-xl text-green-800">
+                  Event Agenda
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
@@ -214,7 +229,9 @@ const EventDetail = () => {
         {/* Compact Image Gallery at Bottom */}
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-xl text-green-800">Event Gallery</CardTitle>
+            <CardTitle className="text-xl text-green-800">
+              Event Gallery
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <Carousel className="w-full max-w-2xl mx-auto">
@@ -222,8 +239,8 @@ const EventDetail = () => {
                 {event.images.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2">
                     <div className="aspect-video h-48">
-                      <img 
-                        src={image} 
+                      <img
+                        src={image}
                         alt={`${event.title} - Image ${index + 1}`}
                         className="w-full h-full object-cover rounded-lg"
                       />
