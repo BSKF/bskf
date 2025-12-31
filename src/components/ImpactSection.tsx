@@ -4,7 +4,7 @@ import React from "react";
 const STATS_DATA = [
   {
     id: 1,
-    value: "3000+",
+    value: "200+",
     title: "Farmers Empowered",
     description: "Helped farmers to tackle their problem across the country",
     image: "/impact_section_assets/Group 1000000938.svg",
@@ -18,7 +18,7 @@ const STATS_DATA = [
   {
     id: 3,
     // Custom data fields for the complex card
-    nationalVal: "15+",
+    nationalVal: "5+",
     interVal: "1+",
     title: "Projects launched",
     description: "Creating impact throughout the country through our projects",
@@ -33,7 +33,7 @@ const STATS_DATA = [
   },
   {
     id: 5,
-    value: "150+",
+    value: "50+",
     title: "Native Varieties Preserved",
     description: "Leading agriculture through technology and innovation",
     image: "/impact_section_assets/Group 1000000944.svg",
@@ -176,12 +176,12 @@ const ImpactSection: React.FC = () => {
                     </span>
                     <span className="text-gray-600 font-medium">National</span>
                   </div>
-                  <div>
+                  {/* <div>
                     <span className="text-4xl md:text-6xl block text-[#313131] font-semibold">
                       {STATS_DATA[2].interVal}
                     </span>
                     <span className="text-gray-600 font-medium">International</span>
-                  </div>
+                  </div> */}
                </div>
                
                <div>
