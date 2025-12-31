@@ -14,16 +14,16 @@ const Events = () => {
       location: "ONLINE",
       participants: 23,
       description: "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. ",
-      image: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/WTW5.jpg"
     },
     {
       id: 2,
-      title: "Building Resilience: Food Forests, Agroforestry, Agri-preneurship & Carbon Credits for Cultivating Climate Solutions & Food Security",
+      title: "Building Resilience: Food Forests, Agroforestry & Climate Solutions for Food Security",
       date: "28th March - 1st April 2025",
       location: "Online",
       participants: 95,
-      description: "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      description: "The ‘Building Resilience’ summit guided farmers, practitioners, and agri-enthusiasts in adopting food forests, agroforestry, agri-preneurship, and carbon credit models to strengthen climate resilience. The sessions showcased practical strategies, expert insights, and real-world applications that empowered participants to build sustainable livelihoods while enhancing food security and climate action.",
+      image: "/BR1.jpg"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const Events = () => {
       location: "Online",
       participants: 67,
       description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/TA3.jpg"
     }
   ];
 

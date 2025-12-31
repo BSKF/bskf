@@ -21,8 +21,80 @@ const EventDetail = () => {
       location: "Online",
       participants: 23,
       status: "Completed",
-      description:
-        "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. It also emphasized how such initiatives can reduce pollution, improve soil fertility, and contribute to a circular economy in agriculture.",
+      description: (
+  <>
+    <p className="mb-4">
+      <strong>Waste to Wealth: Turn Farm Waste into Income</strong>
+    </p>
+
+    <p className="mb-4">
+      The Bangla Susthayi Krishi Foundation (BSKF) recently hosted a landmark
+      five-day virtual workshop,{" "}
+      <strong>“Waste to Wealth: Turn Farm Waste into Income”</strong>, dedicated
+      to pioneering the circular economy within the agricultural sector. Held
+      from <strong>August 16th to 20th, 2025</strong>, this highly focused program
+      empowered <strong>23 participants</strong>—a select cohort of farmers and
+      agri-enthusiasts—by transforming the environmental challenge of farm
+      residue into tangible, sustainable economic opportunities.
+    </p>
+
+    <p className="mb-4">
+      This initiative demonstrates BSKF’s unwavering commitment to local action
+      that drives global change, directly advancing key{" "}
+      <strong>United Nations Sustainable Development Goals (SDGs)</strong> related
+      to economic growth and responsible production.
+    </p>
+
+    <h3 className="font-semibold text-green-800 mt-6 mb-2">
+      The Philosophy: Waste as a Resource, Not a Burden
+    </h3>
+
+    <p className="mb-4">
+      At BSKF, we fundamentally redefine agricultural waste. We see discarded
+      biomass not as pollution, but as unharvested capital. The Waste to Wealth
+      workshop provided the technical blueprint for this transformation, focusing
+      on two core pillars of value:
+    </p>
+
+    <ul className="list-disc list-inside space-y-2 mb-6">
+      <li>
+        <strong>Financial Autonomy:</strong> Participants learned to replace
+        costly imported synthetic fertilizers with valuable, self-produced
+        inputs, drastically reducing expenditures while creating new,
+        high-margin product lines.
+      </li>
+
+      <li>
+        <strong>Ecological Regeneration:</strong> Every technique taught—from
+        advanced composting to bioconversion—focuses on healing the land. These
+        methods sequester carbon, restore essential microbial life, and create{" "}
+        <strong>“Black Gold”</strong> for the soil, moving farming from extractive
+        to restorative.
+      </li>
+    </ul>
+
+    <h3 className="font-semibold text-green-800 mt-6 mb-2">
+      Impact Beyond the Classroom
+    </h3>
+
+    <p className="mb-4">
+      The <strong>“Waste to Wealth”</strong> model, which seamlessly integrates
+      expertise in fields such as <strong>Black Soldier Fly conversion</strong>{" "}
+      and <strong>advanced composting</strong>, provides a clear pathway for
+      smallholder farmers to generate sustainable revenue while actively
+      contributing to <strong>SDG 8 (Decent Work & Economic Growth)</strong> and{" "}
+      <strong>SDG 12 (Responsible Consumption & Production)</strong>.
+    </p>
+
+    <p className="italic text-gray-700 border-l-4 border-green-600 pl-4">
+      “The sessions delivered by BSKF provided technical mastery that immediately
+      translates into profit. This is real-world economic dignity delivered
+      directly to the grassroots.”
+    </p>
+  </>
+)
+,
+
       agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
@@ -30,19 +102,49 @@ const EventDetail = () => {
         "8:15 PM- Q&A Session",
         "8:30 PM - Closing Remarks",
       ],
-      outcomes: [
-        "16th August 2025 ~ Rethinking Agricultural Waste: Sustainable Solutions and Next-Gen by DIPTANU BANIK",
-        "17th August 2025 ~ Black Soldier Fly Farming for Smart Waste Conversion  by DR. DEVINA SERAM",
-        "18th August 2025 ~ Vermicompost turning waste into Black Gold with Earthworms by DR. TARUN KUMAR",
-        "19th August 2025 ~ Composting: Mastering the Basics of Organic Composting by DR. SUSHANT SUKUMAR PATIL",
-        "20th August 2025 ~ Closing Ceremony by BSKF TEAM(Surbhi Srivastava, Subhajit Mukherjee, Swastik Mondal, Sakshi Mondal)",
-      ],
+      speakerTable: [
+  {
+    date: "16th August",
+    topic: "Rethinking Agricultural Waste: Sustainable Solutions and Next-Gen",
+    speaker: "DIPTANU BANIK",
+    outcome: "Strategic vision for resource recovery and next-generation sustainability planning."
+  },
+  {
+    date: "17th August",
+    topic: "Black Soldier Fly Farming for Smart Waste Conversion",
+    speaker: "DR. DEVINA SERAM",
+    outcome: "High-efficiency bioconversion techniques for producing alternative protein and valuable soil amendments."
+  },
+  {
+    date: "18th August",
+    topic: "Vermicompost turning waste into Black Gold with Earthworms",
+    speaker: "DR. TARUN KUMAR",
+    outcome: "Mastering the process of generating superior-quality, nutrient-dense biological fertilizers."
+  },
+  {
+    date: "19th August",
+    topic: "Composting: Mastering the Basics of Organic Composting",
+    speaker: "DR. SUSHANT SUKUMAR PATIL",
+    outcome: "Foundational and advanced principles for creating stable, effective organic compost."
+  },
+  {
+    date: "20th August",
+    topic: "Closing Ceremony",
+    speaker: "BSKF Team",
+    outcome: "Demonstration of learning outcomes and defining implementation pathways for participants."
+  }
+],
+
       images: [
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      ],
+        "/WTW1.jpg",
+        "/WTW2.jpg",
+        "/WTW3.jpg",
+        "/WTW4.jpg",
+        "/WTW5.jpg",
+        "/WTW6.jpg"
+
+        
+      ]
     },
     2: {
       title:
@@ -52,27 +154,141 @@ const EventDetail = () => {
       location: "Online",
       participants: 95,
       status: "Completed",
-      description:
-        "The workshop focused on how innovative and sustainable approaches like food forests, agroforestry practices, and climate-smart entrepreneurship can strengthen food systems, improve livelihoods, and mitigate climate change through carbon credit opportunities. ",
-      agenda: [
+      description: (
+  <>
+    <p className="mb-4">
+      <strong>
+        Building Resilience: Food Forests, Agroforestry, Agri-preneurship &
+        Carbon Credits for Cultivating Climate Solutions & Food Security
+      </strong>
+    </p>
+
+    <p className="mb-4">
+      The Bangla Susthayi Krishi Foundation (BSKF) hosted a highly successful
+      four-day summit, “Building Resilience: Food Forests, Agroforestry,
+      Agri-preneurship & Carbon Credits for Cultivating Climate Solutions &
+      Food Security” in collaboration with Sustainable Agriculture Network and
+      Prakheti. Held virtually from April 28 to May 1, 2025, this flagship
+      program united leading experts and engaged 95 participants in a crucial
+      discussion on the role of regenerative agriculture in mitigating climate
+      change and securing sustainable livelihoods.
+    </p>
+
+    <p className= "font-semibold text-green-800 mt-6 mb-2">
+      🎯 Pioneering Climate-Smart Solutions
+    </p>
+
+    <p className="mb-4">
+      This summit moved beyond traditional farming models, focusing on
+      innovative and sustainable approaches that yield triple-bottom-line
+      benefits—economic, environmental, and social. The core focus areas
+      provided participants with advanced knowledge to implement regenerative
+      food systems:
+    </p>
+
+    <ul className="list-disc pl-6 mb-4">
+      <li>
+        <strong>Food Forests & Agroforestry:</strong> Designing synergistic
+        ecosystems that maximize yield, biodiversity, and land-use efficiency.
+      </li>
+      <li>
+        <strong>Agri-preneurship:</strong> Strengthening livelihoods by building
+        climate-smart entrepreneurship models from local produce and forest
+        heritage.
+      </li>
+      <li>
+        <strong>Carbon Credits:</strong> Mitigating climate change through
+        carbon sequestration and capitalizing on opportunities within the
+        carbon market.
+      </li>
+    </ul>
+
+    <p className="mb-4">
+      This training equipped participants with the knowledge and tools
+      necessary to implement regenerative systems, directly addressing global
+      challenges and making significant contributions to SDG 2 (Zero Hunger),
+      SDG 8 (Decent Work), and SDG 13 (Climate Action).
+    </p>
+
+    <p className="mb-3 font-semibold text-green-900">
+      🌱 The Impact: Cultivating Resilience
+    </p>
+
+    <p className="mb-4">
+      With 95 motivated participants in attendance, the “Building Resilience”
+      program successfully laid the groundwork for a new generation of
+      climate-smart agricultural leaders. The clear focus on turning
+      regenerative practices into viable Carbon Credits and robust
+      Agri-preneurship models ensures that BSKF’s training delivers not only
+      environmental stewardship but also tangible economic growth.
+    </p>
+
+    <p>
+      The seamless blend of ecological expertise (Food Forests,
+      Agroforestry) and business acumen (Sustainable Value Chains, Social
+      Ventures) empowered attendees to return to their fields and communities
+      ready to drive transformative change.
+    </p>
+
+    <p className="italic text-gray-700 border-l-4 border-green-600 pl-4 mt-5">
+      "BSKF is committed to scaling these vital climate solutions. 
+      We invite you to engage with our work, partner with us, and enroll in our upcoming high-impact programs.
+      Don't just adapt to climate change—cultivate the solution."
+    </p>
+  </>
+),      agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
         "7:30 PM - Speech by Guest Speakers",
         "8:15 PM- Q&A Session",
         "8:30 PM - Closing Remarks",
       ],
-      outcomes: [
-        "28th April 2025 ~ Agroforestry for livelihood and environmental security in India by Dr. Sangram Chavan",
-        "29th April 2025 ~ Designing Synergistic Ecosystems: Principles of Food Forests & Agroforestry by Shihab Kunhahammed",
-        "30th April 2025 ~ Building Social Ventures from Local Produce Traditions & Forest Heritage by Shaik Imran Hussain Choudhary",
-        "1st May 2025 ~ From Farm to Market & Beyond. Building Sustainable value Chains by Shameek Chakravarty",
-      ],
+      speakerTable: [
+  {
+    date: "28th April",
+    topic:
+      "Agroforestry for Livelihood and Environmental Security in India",
+    speaker:
+      "Dr. Sangram Chavan (Senior Scientist, ICAR-NIASM)",
+    outcome:
+      "Understanding the foundational role of agroforestry in national food security and ecological balance."
+  },
+  {
+    date: "29th April",
+    topic:
+      "Designing Synergistic Ecosystems: Principles of Food Forests & Agroforestry",
+    speaker:
+      "Shihab Kunhahammed (Food Forest Specialist, Philosan Farms)",
+    outcome:
+      "Practical application of Miyawaki and food forest principles to maximize biodiversity and yield."
+  },
+  {
+    date: "30th April",
+    topic:
+      "Building Social Ventures from Local Produce, Traditions & Forest Heritage",
+    speaker:
+      "Shaik Imran Hussain Choudhary (Founder, Prakheti | COP29 Delegate)",
+    outcome:
+      "Strategies for value addition and creating market-ready social enterprises from sustainable produce."
+  },
+  {
+    date: "1st May",
+    topic:
+      "From Farm to Market & Beyond: Building Sustainable Value Chains",
+    speaker:
+      "Shameek Chakravarty (Founder, Farmizen & Mantid AI)",
+    outcome:
+      "Mastery of efficient, transparent, and sustainable post-harvest supply chain management."
+  }
+],
       images: [
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      ],
+        "/BR1.jpg",
+        "/BR2.jpg",
+        "/BR3.jpg",
+        "/BR4.jpg",
+        "/BR5.jpg",
+
+      ]
     },
     3: {
       title:
@@ -82,8 +298,85 @@ const EventDetail = () => {
       location: "Online",
       participants: 67,
       status: "Completed",
-      description:
-        "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. ",
+      description: (
+  <>
+    <p className="mb-4">
+      <strong>
+        Transforming Agriculture: Driving Climate Solutions and Sustainable Food
+        Systems
+      </strong>
+    </p>
+
+    <p className="mb-4">
+      The Bangla Susthayi Krishi Foundation (BSKF) successfully hosted a two-day
+      high-level virtual event,{" "}
+      <strong>
+        “Transforming Agriculture: Driving Climate Solutions and Sustainable Food
+        Systems”
+      </strong>
+      , held on <strong>January 25th and 26th, 2025</strong>. This critical forum
+      convened <strong>67 participants</strong>, including researchers,
+      academicians, students, and agricultural practitioners, to deliberate on
+      the pivotal role of agriculture in addressing the climate crisis while
+      ensuring sustainable food production on a global scale.
+    </p>
+
+    <p className="mb-3 font-semibold">
+      🎯 The Mandate: Climate Resilience and Food Security
+    </p>
+
+    <p className="mb-4">
+      The event was designed to bridge the gap between scientific theory and
+      on-the-ground practice, focusing on actionable strategies for the future of
+      farming. The key areas of deliberation and insight included:
+    </p>
+
+    <ul className="list-disc pl-6 mb-4">
+      <li>
+        <strong>Climate-Smart Strategies:</strong> Identifying and implementing
+        innovative and technology-driven approaches to build resilience against
+        climate variability.
+      </li>
+      <li>
+        <strong>Regenerative Systems:</strong> Emphasizing the transition toward
+        regenerative agriculture as a definitive pathway to ecological health
+        and long-term food security.
+      </li>
+      <li>
+        <strong>Knowledge Integration:</strong> Bringing together global research
+        perspectives with community-level practitioner insights to foster
+        holistic and scalable solutions.
+      </li>
+    </ul>
+
+    <p className="mb-4">
+      The discussions directly supported the objectives of{" "}
+      <strong>SDG 2 (Zero Hunger)</strong> and{" "}
+      <strong>SDG 13 (Climate Action)</strong>, positioning BSKF as a leader in
+      global agricultural thought leadership.
+    </p>
+
+    <p className="font-semibold text-forest-green mb-3 font-semibold">
+      🌍 The Program: Insights from Global Experts
+    </p>
+
+    <p className="mb-4">
+      The two-day summit featured a highly distinguished panel of global experts,
+      offering in-depth perspectives on both the scientific foundations and
+      real-world applications of climate-resilient and sustainable agricultural
+      systems.
+    </p>
+
+    <p>
+      The <strong>“Transforming Agriculture”</strong> event successfully
+      amplified the urgent dialogue required to redesign global food systems. By
+      uniting the scientific community with on-ground practitioners, BSKF
+      reinforced its commitment to delivering thought leadership and actionable
+      solutions for a sustainable and food-secure world.
+    </p>
+  </>
+),
+
       agenda: [
         "7:00 PM - Registration",
         "7:15 PM - Welcoming Guest Speakers",
@@ -91,34 +384,68 @@ const EventDetail = () => {
         "8:15 PM- Q&A Session",
         "8:30 PM - Closing Remarks",
       ],
-      outcomes: [
-        "25th January 2025 ~ Regenerative Agriculture: A Pathway to Climate Resilience and Sustainable Food Security",
-        "26th January 2025 ~ The Role of Technology and Innovation in Building Climate-Smart Agriculture",
-      ],
+     speakerTable: [
+  {
+    date: "25th January 2025",
+    topic:
+      "Regenerative Agriculture: A Pathway to Climate Resilience and Sustainable Food Security",
+    speaker:
+      "Dr. Venkat Raman Govindula (Agro-Ecology Advisor)",
+    outcome:
+      "Comprehensive understanding of agriculture’s dual role as a climate challenge and a primary solution through agro-ecology."
+  },
+  {
+    date: "25th January 2025",
+    topic:
+      "Building Resilient Agricultural Communities",
+    speaker:
+      "Dr. Ramjaneyulu G.V. (Executive Director, Centre for Sustainable Agriculture)",
+    outcome:
+      "Strategies for community-level organization, knowledge sharing, and implementing decentralized resilience plans."
+  },
+  {
+    date: "26th January 2025",
+    topic:
+      "The Role of Technology and Innovation in Building Climate-Smart Agriculture",
+    speaker:
+      "—",
+    outcome:
+      "Exploration of innovative and technological approaches to enhance resilience and sustainability in agriculture."
+  },
+  {
+    date: "26th January 2025",
+    topic:
+      "Restoration of Soil Health for Resilience and Food Security",
+    speaker:
+      "Dr. Leigh Winowiecki (Global Research Lead)",
+    outcome:
+      "Advanced techniques and global insights into soil health restoration for ecological and economic stability."
+  },
+  {
+    date: "26th January 2025",
+    topic:
+      "Opportunity and Scope in Sustainable Agri-Food Systems",
+    speaker:
+      "Vikrant Srivastava (FAO Youth Policy Board Member, Co-founder of Lead for Earth)",
+    outcome:
+      "Exploring market opportunities, policy frameworks, and career pathways in the evolving sustainable agri-food sector."
+  }
+],
       images: [
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      ],
-    },
+        "/TA1.jpg",
+        "/TA2.jpg",
+        "/TA3.jpg",
+        "/TA4.jpg",
+      ]
+    }
   };
-
-  const eventId = Number(id);
-
-  const event = eventData[eventId as keyof typeof eventData];
+ 
+  const event = eventData[id as keyof typeof eventData];
 
   if (!event) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Event Not Found
-          </h2>
-          <p className="text-gray-600">
-            The event you're looking for doesn't exist.
-          </p>
-        </div>
+        <h2 className="text-2xl font-bold">Event Not Found</h2>
       </div>
     );
   }
@@ -128,64 +455,41 @@ const EventDetail = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+          <h1 className="text-4xl font-bold text-green-800 mb-4">
             {event.title}
           </h1>
-          <Badge className="bg-green-600 text-white mb-4">{event.status}</Badge>
+          <Badge className="bg-green-600 text-white">{event.status}</Badge>
         </div>
 
-        {/* Event Info Cards */}
+        {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <Card>
-            <CardContent className="p-6 text-center">
-              <Calendar className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800 mb-1">Date</h3>
-              <p className="text-gray-600">{event.date}</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6 text-center">
-              <Clock className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800 mb-1">Time</h3>
-              <p className="text-gray-600">{event.time}</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6 text-center">
-              <MapPin className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800 mb-1">Location</h3>
-              <p className="text-gray-600">{event.location}</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6 text-center">
-              <Users className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800 mb-1">Participants</h3>
-              <p className="text-gray-600">{event.participants}</p>
-            </CardContent>
-          </Card>
+          {[ 
+            { icon: Calendar, label: "Date", value: event.date },
+            { icon: Clock, label: "Time", value: event.time },
+            { icon: MapPin, label: "Location", value: event.location },
+            { icon: Users, label: "Participants", value: event.participants },
+          ].map((item, i) => (
+            <Card key={i}>
+              <CardContent className="p-6 text-center">
+                <item.icon className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                <h3 className="font-semibold">{item.label}</h3>
+                <p className="text-gray-600">{item.value}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        {/* Content Grid */}
+        {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Description */}
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-green-800">
                 Event Overview
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                {event.description}
-              </p>
-            </CardContent>
+            <CardContent>{event.description}</CardContent>
           </Card>
 
-          {/* Agenda & Outcomes */}
           <div className="space-y-6">
             <Card>
               <CardHeader>
@@ -195,56 +499,77 @@ const EventDetail = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  {event.agenda.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-600">{item}</span>
+                  {event.agenda?.map((item, i) => (
+                    <li key={i} className="text-gray-600">
+                      • {item}
                     </li>
                   ))}
                 </ul>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-green-800 flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  Speakers
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {event.outcomes.map((outcome, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-600">{outcome}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            {/* SAFE CONDITIONAL */}
+            {event.speakerTable?.length ? (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl text-green-800">
+                    Expert Sessions
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="overflow-x-auto">
+                  <table className="w-full border">
+                    <tbody>
+                      {event.speakerTable.map((row, i) => (
+                        <tr key={i}>
+                          <td className="border p-2">{row.date}</td>
+                          <td className="border p-2">
+                            <strong>{row.topic}</strong>
+                            <br />
+                            {row.speaker}
+                          </td>
+                          <td className="border p-2">{row.outcome}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </CardContent>
+              </Card>
+            ) : event.outcomes?.length ? (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl text-green-800 flex gap-2">
+                    <Award className="w-5 h-5" />
+                    Key Outcomes
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul>
+                    {event.outcomes.map((o, i) => (
+                      <li key={i}>• {o}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ) : null}
           </div>
         </div>
 
-        {/* Compact Image Gallery at Bottom */}
-        <Card className="mt-8">
-          <CardHeader>
+        {/* Gallery */}
+        <Card>
+          <CardHeader className="flex justify-center">
             <CardTitle className="text-xl text-green-800">
               Event Gallery
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <Carousel className="w-full max-w-2xl mx-auto">
+            <Carousel className="max-w-2xl mx-auto">
               <CarouselContent>
-                {event.images.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2">
-                    <div className="aspect-video h-48">
-                      <img
-                        src={image}
-                        alt={`${event.title} - Image ${index + 1}`}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
+                {event.images?.map((img, i) => (
+                  <CarouselItem key={i}>
+                    <img
+                      src={img}
+                      className="rounded-lg w-full h-48 object-cover"
+                    />
                   </CarouselItem>
                 ))}
               </CarouselContent>
