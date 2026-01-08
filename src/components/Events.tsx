@@ -1,9 +1,14 @@
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar, MapPin, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Calendar, MapPin, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const pastEvents = [
@@ -13,27 +18,48 @@ const Events = () => {
       date: "16th August - 20th August 2025",
       location: "ONLINE",
       participants: 23,
-      description: "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. ",
-      image: "/WTW5.jpg"
+      description:
+        "The “Waste to Wealth: Turn Farm Waste into Income” workshop guided farmers and agri-enthusiasts on transforming agricultural residues into valuable products like compost, bio-fertilizers, and energy, promoting sustainable income and environmental conservation. The session highlighted innovative practices and success stories that inspired participants to adopt waste-to-resource approaches. ",
+      image: "/WTW5.jpg",
     },
     {
       id: 2,
-      title: "Building Resilience: Food Forests, Agroforestry & Climate Solutions for Food Security",
+      title:
+        "Building Resilience: Food Forests, Agroforestry & Climate Solutions for Food Security",
       date: "28th March - 1st April 2025",
       location: "Online",
       participants: 95,
-      description: "The ‘Building Resilience’ summit guided farmers, practitioners, and agri-enthusiasts in adopting food forests, agroforestry, agri-preneurship, and carbon credit models to strengthen climate resilience. The sessions showcased practical strategies, expert insights, and real-world applications that empowered participants to build sustainable livelihoods while enhancing food security and climate action.",
-      image: "/BR1.jpg"
+      description:
+        "The ‘Building Resilience’ summit guided farmers, practitioners, and agri-enthusiasts in adopting food forests, agroforestry, agri-preneurship, and carbon credit models to strengthen climate resilience. The sessions showcased practical strategies, expert insights, and real-world applications that empowered participants to build sustainable livelihoods while enhancing food security and climate action.",
+      image: "/BR1.jpg",
     },
     {
       id: 3,
-      title: "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems",
+      title:
+        "Transforming Agriculture: Driving Climate Solutions and Sustainable Food Systems",
       date: "25th January – 26th January 2025",
       location: "Online",
       participants: 67,
-      description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
-      image: "/TA3.jpg"
-    }
+      description:
+        "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
+      image: "/TA3.jpg",
+    },
+    {
+      id: 4,
+      title: "MycoSphere",
+      date: "1st March 2025",
+      location: "School of Agriculture, Lovely Professional University (LPU).",
+      participants: "250",
+      image: "/MS1.jpg",
+    },
+    {
+      id: 5,
+      title: "Hands on diversity",
+      location: "School of Agriculture, Lovely Professional University (LPU).",
+      participants: "300",
+      date: "6th November 2024 - 8th November 2024",
+      image: "/HOB6.jpg",
+    },
   ];
 
   const upcomingEvents = [
@@ -69,8 +95,8 @@ const Events = () => {
   const EventCard = ({ event, isPast }: { event: any; isPast: boolean }) => (
     <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={event.image} 
+        <img
+          src={event.image}
           alt={event.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
@@ -82,7 +108,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-      
+
       <CardHeader>
         <CardTitle className="text-green-800 group-hover:text-green-600 transition-colors">
           {event.title}
@@ -91,7 +117,7 @@ const Events = () => {
           {event.description}
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent>
         <div className="space-y-2 mb-4">
           <div className="flex items-center text-sm text-gray-600">
@@ -103,7 +129,7 @@ const Events = () => {
             {isPast ? `${event.participants} participants` : event.participants}
           </div>
         </div>
-        
+
         <Link to={`/events/${event.id}`}>
           <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
             See More
@@ -119,35 +145,41 @@ const Events = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-green-800 mb-4">Our Events</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Join us in our mission to transform agriculture through knowledge sharing, 
-            community building, and sustainable practices.
+            Join us in our mission to transform agriculture through knowledge
+            sharing, community building, and sustainable practices.
           </p>
         </div>
 
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
-            <TabsTrigger value="upcoming" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
-              Upcoming Events
-            </TabsTrigger>
-            <TabsTrigger value="past" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
+            <TabsTrigger
+              value="past"
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
               Past Events
             </TabsTrigger>
+            <TabsTrigger
+              value="upcoming"
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
+              Upcoming Events
+            </TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="upcoming">
-            {upcomingEvents.length>0?(
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {upcomingEvents.map((event) => (
-                <EventCard key={event.id} event={event} isPast={false} />
-              ))}
-            </div>):(
-              <div className='w-full flex justify-center text-4xl font-bold text-green-800 mb-4'>
+            {upcomingEvents.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {upcomingEvents.map((event) => (
+                  <EventCard key={event.id} event={event} isPast={false} />
+                ))}
+              </div>
+            ) : (
+              <div className="w-full flex justify-center text-4xl font-bold text-green-800 mb-4">
                 Coming Soon
               </div>
-            )
-            }
+            )}
           </TabsContent>
-          
+
           <TabsContent value="past">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pastEvents.map((event) => (

@@ -23,24 +23,6 @@ const projectList = [
     duration: "January 2023 - Ongoing",
     status: "Active",
     thumbnail: "/MN6.jpg",
-  },
-  {
-    id: 3,
-    title: "MycoSphere",
-    location: "School of Agriculture, Lovely Professional University (LPU).",
-    participants: "250",
-    duration: "1st March 2025",
-    status: "Completed",
-    thumbnail: "/MS1.jpg",
-  },
-  {
-    id: 4,
-    title: "Hands on diversity",
-    location: "School of Agriculture, Lovely Professional University (LPU).",
-    participants: "300",
-    duration: "6th November 2024 - 8th November 2024" ,
-    status: "Completed",
-    thumbnail: "/HOB6.jpg",
   }
 ];
 
