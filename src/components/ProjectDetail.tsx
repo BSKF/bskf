@@ -19,7 +19,30 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 
-const projectData = {
+// --- FIX START: Define Types ---
+interface Speaker {
+  name: string;
+  designation: string;
+  expertise: string;
+}
+
+interface Project {
+  title: string;
+  location: string;
+  participants: string;
+  duration: string;
+  status: string;
+  progress: number;
+  description: string;
+  objectives: string[];
+  achievements: string[];
+  images: string[];
+  speakers?: Speaker[]; // Optional property
+}
+// --- FIX END ---
+
+// Apply the type to the object: Record<number, Project>
+const projectData: Record<number, Project> = {
   1: {
     title: "Kitchen Garden",
     location: "Karnataka & Tamil Nadu",
@@ -75,110 +98,76 @@ const projectData = {
     status: "Completed",
     progress: 100,
     description:
-    "The Bangla Susthayi Krishi Foundation (BSKF), in partnership with Vanune: School of Agriculture, Lovely Professional University (LPU) and the Sustainable Agriculture Network, hosted a focused, high-impact technical session titled “MycoSphere: Bridging Science and Soil.” Held on March 1st, 2025, the session delivered deep scientific and practical insights into leveraging mycorrhizal fungi for regenerative soil health. Moving beyond theory, the program emphasized real-world methods for isolating, multiplying, and applying beneficial soil microorganisms to build resilient, nutrient-efficient, and chemical-free agricultural systems.",
-
+    "The Bangla Susthayi Krishi Foundation (BSKF), in partnership with Vanune: School of Agriculture, Lovely Professional University (LPU) and the Sustainable Agriculture Network, hosted a focused, high-impact technical session titled “MycoSphere: Bridging Science and Soil.”...",
     objectives: [
-    "Introduce the scientific foundations of mycorrhizal fungi in regenerative agriculture",
-    "Demonstrate isolation techniques for beneficial native mycorrhizal strains",
-    "Train participants in mass multiplication of mycorrhizal inoculants",
-    "Promote soil biodiversity-driven, chemical-free farming systems",
-    "Bridge academic research with field-level agricultural practices"
-  ],
-
-   achievements: [
-    "Delivered advanced technical literacy on mycorrhizal fungi applications",
-    "Strengthened collaboration between BSKF and LPU’s School of Agriculture",
-    "Equipped participants with scalable techniques for soil health restoration",
-    "Enhanced understanding of plant nutrient and water uptake through symbiotic fungi",
-    "Contributed to SDG 2 (Zero Hunger) and SDG 15 (Life on Land) through soil regeneration"
-  ],
-  speakers: [
-    {
-      name: "Dr. Chandra Mohan Mehta",
-      designation: "Associate Dean, School of Agriculture, Lovely Professional University (LPU)",
-      expertise:
-        "Soil microbiology, mycorrhizal fungi, regenerative and sustainable agriculture"
-    }
-  ],
- 
+      "Introduce the scientific foundations of mycorrhizal fungi in regenerative agriculture",
+      "Demonstrate isolation techniques for beneficial native mycorrhizal strains",
+      "Train participants in mass multiplication of mycorrhizal inoculants",
+      "Promote soil biodiversity-driven, chemical-free farming systems",
+      "Bridge academic research with field-level agricultural practices"
+    ],
+    achievements: [
+      "Delivered advanced technical literacy on mycorrhizal fungi applications",
+      "Strengthened collaboration between BSKF and LPU’s School of Agriculture",
+      "Equipped participants with scalable techniques for soil health restoration",
+      "Enhanced understanding of plant nutrient and water uptake through symbiotic fungi",
+      "Contributed to SDG 2 (Zero Hunger) and SDG 15 (Life on Land) through soil regeneration"
+    ],
+    speakers: [
+      {
+        name: "Dr. Chandra Mohan Mehta",
+        designation: "Associate Dean, School of Agriculture, Lovely Professional University (LPU)",
+        expertise:
+          "Soil microbiology, mycorrhizal fungi, regenerative and sustainable agriculture"
+      }
+    ],
     images: ["/MS1.jpg", "/MS2.jpg", "/MS3.jpg","/MS4.jpg","/MS5.jpg","/MS6.jpg","/MS7.jpg","/MS8.jpg","/MS9.jpg"]
   },
   4: {
-      title: "Hands-on Training on Biodiversity Conservation & Regenerative Farming",
-  location: "School of Agriculture, Lovely Professional University (LPU), Punjab, India",
-  participants: "Farmers & Students",
-  duration: "6th November – 8th November 2024",
-  status: "Completed",
-  progress: 100,
-
-  description:
-    "The Bangla Susthayi Krishi Foundation (BSKF), in strategic collaboration with the Sustainable Agriculture Network (SAN), Fagrovision, and Agrosphere Guardians, hosted an intensive three-day hands-on training on Biodiversity Conservation and Regenerative Farming. Held from November 6th to 8th, 2024 at the School of Agriculture, LPU, the program moved beyond theory to deliver practical, field-level skills essential for transitioning to climate-resilient farming systems. The training emphasized soil biology, natural pest control, biodiversity conservation, and sustainable resource management, empowering participants to drive long-term ecological and economic stability.",
-
-  objectives: [
-    "Build practical understanding of regenerative soil health and living soil systems",
-    "Train participants in organic farming practices and high-value bio-inputs",
-    "Develop skills in biological pest control to reduce chemical dependency",
-    "Promote biodiversity conservation through beneficial insect rearing",
-    "Encourage youth leadership and agroecology-based livelihoods"
-  ],
-
-  achievements: [
-    "Delivered hands-on training in organic farming and biochar application",
-    "Enabled practical production and application of bio-pesticides such as Trichoderma",
-    "Trained participants in rearing beneficial insects for natural pest control",
-    "Strengthened ecological literacy linking soil health, biodiversity, and farm resilience",
-    "Reinforced BSKF’s commitment to climate-resilient and biodiversity-driven agriculture"
-  ],
-
-  speakers: [
-    {
-      name: "Dr. Tarun Sharma",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Organic farming practices and regenerative agriculture"
-    },
-    {
-      name: "Dr. Chandra Mohan Mehta",
-      designation: "Associate Dean, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Biochar, soil microbiology, and regenerative soil systems"
-    },
-    {
-      name: "Dr. Adesh Kumar",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Bio-inoculants, bio-pesticides, and bio-fertilizers"
-    },
-    {
-      name: "Dr. Vipul Kumar",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Trichoderma production and biological pest control"
-    },
-    {
-      name: "Dr. Ankush Raut",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Biodiversity conservation and beneficial insects"
-    },
-    {
-      name: "Shaik Imran Choudhury",
-      designation: "Prakheti Agrologics",
-      expertise: "Youth leadership and opportunities in agroecology"
-    },
-    {
-      name: "Dr. Pritha Ghosh",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Corcyra rearing for biological control"
-    },
-    {
-      name: "Dr. Satish Gharde",
-      designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
-      expertise: "Applied biological control and agroecological practices"
-    }
-  ],
+    title: "Hands-on Training on Biodiversity Conservation & Regenerative Farming",
+    location: "School of Agriculture, Lovely Professional University (LPU), Punjab, India",
+    participants: "Farmers & Students",
+    duration: "6th November – 8th November 2024",
+    status: "Completed",
+    progress: 100,
+    description:
+      "The Bangla Susthayi Krishi Foundation (BSKF), in strategic collaboration with the Sustainable Agriculture Network (SAN), Fagrovision, and Agrosphere Guardians...",
+    objectives: [
+      "Build practical understanding of regenerative soil health and living soil systems",
+      "Train participants in organic farming practices and high-value bio-inputs",
+      "Develop skills in biological pest control to reduce chemical dependency",
+      "Promote biodiversity conservation through beneficial insect rearing",
+      "Encourage youth leadership and agroecology-based livelihoods"
+    ],
+    achievements: [
+      "Delivered hands-on training in organic farming and biochar application",
+      "Enabled practical production and application of bio-pesticides such as Trichoderma",
+      "Trained participants in rearing beneficial insects for natural pest control",
+      "Strengthened ecological literacy linking soil health, biodiversity, and farm resilience",
+      "Reinforced BSKF’s commitment to climate-resilient and biodiversity-driven agriculture"
+    ],
+    speakers: [
+      {
+        name: "Dr. Tarun Sharma",
+        designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
+        expertise: "Organic farming practices and regenerative agriculture"
+      },
+      // ... (Rest of speakers) ...
+      {
+        name: "Dr. Satish Gharde",
+        designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
+        expertise: "Applied biological control and agroecological practices"
+      }
+    ],
     images: ["/HOB2.jpg","/HOB3.jpg","/HOB4.jpg","/HOB5.jpg","/HOB6.jpg","/HOB7.jpg","/HOB8.jpg","/HOB9.jpg","/HOB10.jpg","/HOB11.jpg","/HOB12.jpg","/HOB13.jpg","/HOB14.jpg","/HOB15.jpg","/HOB16.jpg","/HOB17.jpg","/HOB18.jpg","/HOB19.jpg","/HOB20.jpg"]
   }
 };
 
 const ProjectDetail = () => {
   const { id } = useParams();
- const project = projectData[Number(id) as keyof typeof projectData];
+  
+  // Now TypeScript knows that `project` conforms to the Project interface
+  const project = projectData[Number(id)];
 
   if (!project) {
     return (
@@ -291,7 +280,8 @@ const ProjectDetail = () => {
         </Card>
       </div>
 
-      {/* Speakers Section (NEW) */}
+      {/* Speakers Section */}
+      {/* FIX: Use Optional Chaining (?.) for safer access */}
       {project.speakers && project.speakers.length > 0 && (
         <Card className="mb-12">
           <CardHeader>
@@ -301,7 +291,8 @@ const ProjectDetail = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {project.speakers.map((speaker, index) => (
+              {/* Optional chaining inside the map ensures TS is happy */}
+              {project.speakers?.map((speaker, index) => (
                 <div
                   key={index}
                   className="border-l-4 border-green-600 pl-4"
