@@ -1,8 +1,23 @@
-import { Users, Sprout, Heart, Linkedin, Instagram } from 'lucide-react';
+import { useState } from 'react';
+import { Users, Sprout, Heart, Linkedin, Instagram, Copy, Check } from 'lucide-react';
 import CountUp from 'react-countup';
 import { FaFacebook , FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
+  const [copiedReg, setCopiedReg] = useState(false);
+  const [copiedDarpan, setCopiedDarpan] = useState(false);
+
+  const handleCopy = (text: string, isReg: boolean) => {
+    navigator.clipboard.writeText(text);
+    if (isReg) {
+      setCopiedReg(true);
+      setTimeout(() => setCopiedReg(false), 2000);
+    } else {
+      setCopiedDarpan(true);
+      setTimeout(() => setCopiedDarpan(false), 2000);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
       {/* Video Background */}
@@ -21,7 +36,33 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-green-900/85"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 pt-36 md:pt-32 text-center text-white max-w-5xl mx-auto space-y-8 animate-fadeInSlow">
+      <div className="relative z-10 pt-32 md:pt-32 text-center text-white max-w-5xl mx-auto space-y-6 md:space-y-8 animate-fadeInSlow">
+        {/* Registration and Darpan IDs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs sm:text-base font-semibold text-yellow-50/90 mb-1">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-white/20 shadow-lg hover:bg-white/15 transition-all w-fit">
+            <span>Registration Number : S0056943</span>
+            <button
+              onClick={() => handleCopy("S0056943", true)}
+              className="p-1 hover:bg-white/20 rounded-full transition-colors active:scale-95"
+              title="Copy Registration Number"
+              aria-label="Copy Registration Number"
+            >
+              {copiedReg ? <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" /> : <Copy className="w-3 h-3 sm:w-4 sm:h-4" />}
+            </button>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-white/20 shadow-lg hover:bg-white/15 transition-all w-fit">
+            <span>Darpan Id : WB/2025/0765073</span>
+            <button
+              onClick={() => handleCopy("WB/2025/0765073", false)}
+              className="p-1 hover:bg-white/20 rounded-full transition-colors active:scale-95"
+              title="Copy Darpan ID"
+              aria-label="Copy Darpan ID"
+            >
+              {copiedDarpan ? <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" /> : <Copy className="w-3 h-3 sm:w-4 sm:h-4" />}
+            </button>
+          </div>
+        </div>
+
         {/* Headline with shimmer */}
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 bg-clip-text text-transparent animate-text-shimmer">
           Bangla Susthayi Krishi Foundation
