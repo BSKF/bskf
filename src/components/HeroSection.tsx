@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Users, Sprout, Heart, Linkedin, Instagram, Copy, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Users, Sprout, Heart, Linkedin, Instagram, Copy, Check, ArrowRight } from 'lucide-react';
 import CountUp from 'react-countup';
 import { FaFacebook , FaLinkedin } from "react-icons/fa";
 
@@ -69,9 +70,23 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-4xl font-semibold mb-8 text-[#FED16A] max-w-3xl mx-auto leading-relaxed font-sans">
+        <p className="text-xl md:text-3xl font-semibold mb-8 text-[#FED16A] max-w-3xl mx-auto leading-relaxed font-sans">
           Empowering farmers across India through sustainable practices and community support
         </p>
+
+        {/* Digital Pathshala CTA */}
+        <div className="mb-10">
+          <Link 
+            to="/digital-pathshala"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full overflow-hidden hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(74,222,128,0.4)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative z-10 text-white font-bold tracking-wider uppercase text-sm sm:text-base">Explore Digital Pathshala</span>
+            <span className="w-8 h-8 rounded-full bg-[#4ADE80] flex items-center justify-center text-black group-hover:scale-110 transition-transform relative z-10">
+               <ArrowRight size={18} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+            </span>
+          </Link>
+        </div>
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-8">
