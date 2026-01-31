@@ -8,13 +8,29 @@ const Navbar = () => {
   const location = useLocation(); // Get current location
   const isHomePage = location.pathname === '/';
 
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 24); // adjust as needed
+      const currentScrollY = window.scrollY;
+      
+      // Determine if scrolling up or down
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling DOWN and passed threshold -> Hide
+        setIsVisible(false);
+      } else {
+        // Scrolling UP or at top -> Show
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+      setScrolled(currentScrollY > 24); 
     };
+
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [lastScrollY]);
 
   // Updated navLinks to include hash links for homepage sections
   const navLinks = [
@@ -22,6 +38,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
    // { name: 'Impact', path: '/#impact' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Digital Pathsala', path: '/digital-pathshala' },
     { name: 'Events', path: '/events' },
     { name: 'Publications', path: '/publications' },
     // { name: 'Contact', path: '/#contact' },
@@ -81,7 +98,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 transform
+        ${isVisible ? 'translate-y-0' : '-translate-y-full'}
         ${scrolled
           ? 'bg-white/60 backdrop-blur shadow-lg'
           : 'bg-transparent shadow-none'
