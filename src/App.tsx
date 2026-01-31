@@ -17,6 +17,7 @@ import About from "./pages/About";
 
 import PublicationsPage from "./pages/PublicationsPage";
 import PublicationDetailPage from "./pages/PublicationDetailPage";
+import DigitalPathshalaPage from "./pages/DigitalPathshalaPage";
 
 const App = () => {
   useEffect(() => {
@@ -51,6 +52,9 @@ const App = () => {
           {/* Publications */}
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/publications/:id" element={<PublicationDetailPage />} />
+
+          {/* Digital Pathsala */}
+          <Route path="/digital-pathshala" element={<DigitalPathshalaPage />} />
 
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
