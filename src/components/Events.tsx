@@ -153,16 +153,16 @@ const Events = () => {
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
             <TabsTrigger
-              value="past"
-              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
-            >
-              Past Events
-            </TabsTrigger>
-            <TabsTrigger
               value="upcoming"
               className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
             >
               Upcoming Events
+            </TabsTrigger>
+            <TabsTrigger
+              value="past"
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
+              Past Events
             </TabsTrigger>
           </TabsList>
 

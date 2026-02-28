@@ -8,22 +8,52 @@ import { MapPin, Users, Calendar } from "lucide-react";
 const projectList = [
   {
     id: 1,
-    title: "Kitchen Garden",
-    location: "Rajasthan & Gujarat",
-    participants: "1,800 farmers",
-    duration: "January 2023 - Ongoing",
+    title: "FROM SEED TO PLATE (Kitchen Garden Initiative)",
+    location: "Dasagram, West Bengal",
+    participants: "200+ Student Trainees",
+    duration: "9th September 2024 - Ongoing",
     status: "Active",
     thumbnail: "/KG2.jpg",
   },
   {
     id: 2,
     title: "Mitti Navinikaran",
-    location: "Rajasthan & Gujarat",
-    participants: "1,800 farmers",
-    duration: "January 2023 - Ongoing",
-    status: "Active",
+    location: "Punjab",
+    participants: "20 Farmers & 15 Student Voluteers",
+    duration: "September 2024 - February 2025",
+    status: "Complete",
     thumbnail: "/MN6.jpg",
-  }
+
+  },
+
+  {
+    id: 3,
+    title: "Digital Pathshala",
+    location: "Bankura, West Bengal",
+    participants: "30 Student",
+    duration: "23rd January 2026 - Ongoing",
+    status: "Active",
+    thumbnail: "/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.21.jpeg",
+
+  },
+  // {
+  //   id: 3,
+  //   title: "MycoSphere",
+  //   location: "School of Agriculture, Lovely Professional University (LPU).",
+  //   participants: "250",
+  //   duration: "1st March 2025",
+  //   status: "Completed",
+  //   thumbnail: "/MS1.jpg",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Hands on diversity",
+  //   location: "School of Agriculture, Lovely Professional University (LPU).",
+  //   participants: "300",
+  //   duration: "6th November 2024 - 8th November 2024" ,
+  //   status: "Completed",
+  //   thumbnail: "/HOB6.jpg",
+  // }
 ];
 
 const Projects = () => {
