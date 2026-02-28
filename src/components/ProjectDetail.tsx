@@ -19,6 +19,7 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 
+<<<<<<< Updated upstream
 const projectData = {
   1: {
     title: "Kitchen Garden",
@@ -41,33 +42,116 @@ const projectData = {
       "40% increase in soil organic matter",
       "25% increase in farmer income"
     ],
+=======
+// --- FIX START: Define Types ---
+interface Speaker {
+  name: string;
+  designation: string;
+  expertise: string;
+}
+
+interface Project {
+  title: string;
+  location: string;
+  participants: string;
+  duration: string;
+  status: string;
+  progress: number;
+  description: string;
+  objectives: string[];
+  achievements: string[];
+  images: string[];
+  speakers?: Speaker[]; // Optional property
+}
+// --- FIX END ---
+
+// Apply the type to the object: Record<number, Project>
+const projectData: Record<number, Project> = {
+ 1: {
+  title: "From Seed to Plate (Kitchen Garden Initiative)",
+  location: "Dasagram, West Bengal",
+  participants: "200+ students",
+  duration: "September 9, 2023 - Ongoing",
+  status: "Active",
+  progress: 80,
+  description:
+    "From Seed to Plate is BSKF’s flagship ‘Living Classroom’ initiative launched on September 9, 2023, in Dasagram, West Bengal. What began as a School Kitchen Garden evolved into a biodiversity-driven educational movement integrating indigenous seed conservation with hands-on STEM learning. The project transforms schools into centers of agricultural excellence where students cultivate chemical-free crops, conserve traditional varieties, and bridge the gap between scientific education and rural farming wisdom.",
+
+  objectives: [
+    "Conserve indigenous vegetable and wild edible varieties",
+    "Integrate biodiversity education into school curriculum",
+    "Promote 100% chemical-free cultivation practices",
+    "Establish community seed banks for farmer access",
+    "Bridge generational knowledge gaps in sustainable agriculture"
+  ],
+
+  achievements: [
+    "51 indigenous brinjal varieties conserved",
+    "11 rare wild edible species preserved",
+    "80+ vegetable varieties cultivated in one school season",
+    "200+ student Biodiversity Guardians trained",
+    "Established a functional community seed bank system"
+  ],
+>>>>>>> Stashed changes
     images: ["/KG1.jpg","/KG2.jpg","/KG3.jpg","/KG4.jpg","/KG5.jpg","/KG6.jpg","/KG7.jpg","/KG8.jpg","/KG9.jpg","/KG10.jpg","/KG11.jpg","/KG12.jpg","/KG14.jpg","/KG15.jpg","/KG16.jpg","/KG17.jpg"]
   },
 
   2: {
-    title: "Mitti Navinikaran",
-    location: "Rajasthan & Gujarat",
-    participants: "1,800 farmers",
-    duration: "January 2023 - Ongoing",
-    status: "Active",
-    progress: 60,
-    description:
-      "The Water Conservation Initiative focuses on building community-managed water harvesting systems and promoting drought-resistant crops...",
-    objectives: [
-      "Build water harvesting systems",
-      "Promote drought-resistant crops",
-      "Train farmers in drip irrigation",
-      "Improve groundwater recharge"
-    ],
-    achievements: [
-      "120 structures built",
-      "1,800 farmers trained",
-      "30% reduced water usage",
-      "50% groundwater increase"
-    ],
+  title: "Mitti Navinikaran",
+  location: "Punjab",
+  participants: "80 farmers",
+  duration: "September 2024 - February 2025",
+  status: "Complete",
+  progress: 100,
+  description:
+    "Mitti Navinikaran (Soil Rejuvenation) was a high-impact initiative aimed at restoring Punjab’s degraded soils through sustainable, eco-friendly farming practices. Led by agricultural specialist Dr. Vipul Kumar, the project focused on improving soil vitality using natural microbial solutions like Trichoderma, increasing organic matter, and rebuilding biodiversity. By combining scientific expertise with hands-on farmer training and youth participation, the initiative promoted long-term soil fertility, reduced chemical dependency, and strengthened community resilience.",
+
+  objectives: [
+    "Restore soil health using microbial solutions like Trichoderma",
+    "Increase soil biodiversity and organic matter content",
+    "Train farmers in precise bio-fertilizer dosage and application methods",
+    "Promote green manuring and organic residue management",
+    "Bridge the gap between agricultural education and real-world farming"
+  ],
+
+  achievements: [
+    "Reduced dependency on synthetic fertilizers and pesticides",
+    "Improved crop resilience against pests and diseases",
+    "Lowered input costs for participating farmers",
+    "Integrated 15 student volunteers with 20 local farmers for practical field transformation",
+    "Promoted production of healthier, chemical-free food for the community"
+  ],
     images: ["/MN1.jpg", "/MN3.jpg","/MN4.jpg","/MN5.jpg","/MN6.jpg","/MN7.jpg","/MN8.jpg","/MN9.jpg","/MN10.jpg"]
   },
+
   3: {
+ title: "Digital Pathshala",
+  location: "Rural, Tribal & Backward Regions of India",
+  participants: "Rural School Students",
+  duration: "23rd January 2026 - Ongoing",
+  status: "Active",
+  progress: 10,
+  description:
+    "Digital Pathshala is a nation-building education initiative launched on 23rd January 2026 to transform learning in rural, tribal, and backward regions of India. The program integrates digital literacy with agricultural awareness to nurture confident, self-reliant, and future-ready students. By building essential computer skills and reconnecting children with the importance of sustainable food systems, Digital Pathshala aims to bridge the digital divide while strengthening India’s agricultural foundation.",
+
+  objectives: [
+    "Introduce essential computer and digital literacy skills to rural students",
+    "Build a lifelong habit of learning and curiosity",
+    "Create early exposure to agriculture and food systems",
+    "Empower students to become self-reliant and future-ready",
+    "Establish Digital Pathshalas in every rural and tribal block of India"
+  ],
+
+  achievements: [
+    "Official program launch on 23rd January 2026",
+    "Designed scalable model requiring ₹50,000 per center",
+    "Integrated digital education with agricultural awareness framework",
+    "Created a sustainable expansion vision across rural India"
+  ],
+    images: ["/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.07.jpeg","/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.21.jpeg","/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.22.jpeg","/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.23.jpeg","/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.24.jpeg","/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.25.jpeg",]
+  },
+
+  4: {
     title: "MycoSphere: Bridging Science and Soil",
     location: "Lovely Professional University (LPU), Punjab, India",
     participants: "Agricultural practitioners & students",
@@ -103,6 +187,7 @@ const projectData = {
  
     images: ["/MS1.jpg", "/MS2.jpg", "/MS3.jpg","/MS4.jpg","/MS5.jpg","/MS6.jpg","/MS7.jpg","/MS8.jpg","/MS9.jpg"]
   },
+<<<<<<< Updated upstream
   4: {
       title: "Hands-on Training on Biodiversity Conservation & Regenerative Farming",
   location: "School of Agriculture, Lovely Professional University (LPU), Punjab, India",
@@ -172,6 +257,44 @@ const projectData = {
       expertise: "Applied biological control and agroecological practices"
     }
   ],
+=======
+  5: {
+    title: "Hands-on Training on Biodiversity Conservation & Regenerative Farming",
+    location: "School of Agriculture, Lovely Professional University (LPU), Punjab, India",
+    participants: "Farmers & Students",
+    duration: "6th November – 8th November 2024",
+    status: "Completed",
+    progress: 100,
+    description:
+      "The Bangla Susthayi Krishi Foundation (BSKF), in strategic collaboration with the Sustainable Agriculture Network (SAN), Fagrovision, and Agrosphere Guardians...",
+    objectives: [
+      "Build practical understanding of regenerative soil health and living soil systems",
+      "Train participants in organic farming practices and high-value bio-inputs",
+      "Develop skills in biological pest control to reduce chemical dependency",
+      "Promote biodiversity conservation through beneficial insect rearing",
+      "Encourage youth leadership and agroecology-based livelihoods"
+    ],
+    achievements: [
+      "Delivered hands-on training in organic farming and biochar application",
+      "Enabled practical production and application of bio-pesticides such as Trichoderma",
+      "Trained participants in rearing beneficial insects for natural pest control",
+      "Strengthened ecological literacy linking soil health, biodiversity, and farm resilience",
+      "Reinforced BSKF’s commitment to climate-resilient and biodiversity-driven agriculture"
+    ],
+    speakers: [
+      {
+        name: "Dr. Tarun Sharma",
+        designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
+        expertise: "Organic farming practices and regenerative agriculture"
+      },
+      // ... (Rest of speakers) ...
+      {
+        name: "Dr. Satish Gharde",
+        designation: "Faculty, School of Agriculture, Lovely Professional University (LPU)",
+        expertise: "Applied biological control and agroecological practices"
+      }
+    ],
+>>>>>>> Stashed changes
     images: ["/HOB2.jpg","/HOB3.jpg","/HOB4.jpg","/HOB5.jpg","/HOB6.jpg","/HOB7.jpg","/HOB8.jpg","/HOB9.jpg","/HOB10.jpg","/HOB11.jpg","/HOB12.jpg","/HOB13.jpg","/HOB14.jpg","/HOB15.jpg","/HOB16.jpg","/HOB17.jpg","/HOB18.jpg","/HOB19.jpg","/HOB20.jpg"]
   }
 };

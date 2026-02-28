@@ -6,6 +6,42 @@ import { Calendar, MapPin, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Events = () => {
+  const upcomingEvents = [
+    {
+      id: 4,
+      title: "Seed Exchange Festival",
+      date: "July 22, 2024",
+      location: "Maharashtra, India",
+      participants: "Expected 300+",
+      description:
+        "Annual festival celebrating traditional seeds and promoting seed sovereignty among farmers.",
+      image:
+        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 5,
+      title: "Climate Resilient Agriculture",
+      date: "August 10, 2024",
+      location: "Tamil Nadu, India",
+      participants: "Expected 150+",
+      description:
+        "Workshop on adapting farming practices to climate change challenges.",
+      image:
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 6,
+      title: "Young Farmers Convention",
+      date: "September 5, 2024",
+      location: "Gujarat, India",
+      participants: "Expected 250+",
+      description:
+        "Empowering the next generation of farmers with modern sustainable techniques.",
+      image:
+        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+  ];
+
   const pastEvents = [
     {
       id: 1,
@@ -31,39 +67,34 @@ const Events = () => {
       date: "25th January – 26th January 2025",
       location: "Online",
       participants: 67,
+<<<<<<< Updated upstream
       description: "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
       image: "/TA3.jpg"
     }
-  ];
-
-  const upcomingEvents = [
-    // {
-    //   id: 4,
-    //   title: "Seed Exchange Festival",
-    //   date: "July 22, 2024",
-    //   location: "Maharashtra, India",
-    //   participants: "Expected 300+",
-    //   description: "Annual festival celebrating traditional seeds and promoting seed sovereignty among farmers.",
-    //   image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    // },
-    // {
-    //   id: 5,
-    //   title: "Climate Resilient Agriculture",
-    //   date: "August 10, 2024",
-    //   location: "Tamil Nadu, India",
-    //   participants: "Expected 150+",
-    //   description: "Workshop on adapting farming practices to climate change challenges.",
-    //   image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    // },
-    // {
-    //   id: 6,
-    //   title: "Young Farmers Convention",
-    //   date: "September 5, 2024",
-    //   location: "Gujarat, India",
-    //   participants: "Expected 250+",
-    //   description: "Empowering the next generation of farmers with modern sustainable techniques.",
-    //   image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    // }
+=======
+      description:
+        "The event brought together researchers, academicians, students, and agricultural practitioners to deliberate on the critical role of agriculture in addressing climate change while ensuring sustainable food production. Over the two days, the program served as a dynamic platform for exchanging ideas, sharing innovations, and highlighting strategies to make agricultural practices more resilient, eco-friendly, and resource-efficient. ",
+      image: "/TA3.jpg",
+    },
+    {
+      id: 4,
+      title: "MycoSphere",
+      date: "1st March 2025",
+      location:
+        "School of Agriculture, Lovely Professional University (LPU).",
+      participants: "250",
+      image: "/MS1.jpg",
+    },
+    {
+      id: 5,
+      title: "Hands on diversity",
+      location:
+        "School of Agriculture, Lovely Professional University (LPU).",
+      participants: "300",
+      date: "6th November 2024 - 8th November 2024",
+      image: "/HOB6.jpg",
+    },
+>>>>>>> Stashed changes
   ];
 
   const EventCard = ({ event, isPast }: { event: any; isPast: boolean }) => (
@@ -100,7 +131,9 @@ const Events = () => {
           </div>
           <div className="flex items-center text-sm text-gray-600">
             <Users className="w-4 h-4 mr-2 text-green-600" />
-            {isPast ? `${event.participants} participants` : event.participants}
+            {isPast
+              ? `${event.participants} participants`
+              : event.participants}
           </div>
         </div>
         
@@ -117,7 +150,9 @@ const Events = () => {
     <section className="py-16 bg-gradient-to-b from-green-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-green-800 mb-4">Our Events</h2>
+          <h2 className="text-4xl font-bold text-green-800 mb-4">
+            Our Events
+          </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Join us in our mission to transform agriculture through knowledge sharing, 
             community building, and sustainable practices.
@@ -126,15 +161,30 @@ const Events = () => {
 
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
+<<<<<<< Updated upstream
             <TabsTrigger value="upcoming" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
               Upcoming Events
             </TabsTrigger>
             <TabsTrigger value="past" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
+=======
+            {/* UPDATED ORDER */}
+            <TabsTrigger
+              value="upcoming"
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
+              Upcoming Events
+            </TabsTrigger>
+            <TabsTrigger
+              value="past"
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
+>>>>>>> Stashed changes
               Past Events
             </TabsTrigger>
           </TabsList>
           
           <TabsContent value="upcoming">
+<<<<<<< Updated upstream
             {upcomingEvents.length>0?(
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingEvents.map((event) => (
@@ -142,6 +192,20 @@ const Events = () => {
               ))}
             </div>):(
               <div className='w-full flex justify-center text-4xl font-bold text-green-800 mb-4'>
+=======
+            {upcomingEvents.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {upcomingEvents.map((event) => (
+                  <EventCard
+                    key={event.id}
+                    event={event}
+                    isPast={false}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="w-full flex justify-center text-4xl font-bold text-green-800 mb-4">
+>>>>>>> Stashed changes
                 Coming Soon
               </div>
             )
