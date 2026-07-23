@@ -52,7 +52,7 @@ const ImmersiveHero = () => {
             <div className="absolute inset-0 z-0">
                 <img 
                     ref={imageRef}
-                    src="/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.07.jpeg" 
+                    src="/digital_pathshala/front_img.jpg" 
                     className="w-full h-full object-cover opacity-60"
                     alt="Digital Pathsala"
                 />

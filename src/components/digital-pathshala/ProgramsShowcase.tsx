@@ -7,7 +7,7 @@ const ProgramsShowcase = () => {
             title: "Sunday Masterclass",
             subtitle: "Mentorship",
             desc: "Weekly online sessions with IIT/NIT mentors guiding students through STEM concepts and career paths.",
-            img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800",
+            img: "/digital_pathshala/sunday_masterclass.jpg",
         },
         {
             id: "02",
@@ -21,12 +21,12 @@ const ProgramsShowcase = () => {
             title: "Digital Lab",
             subtitle: "Innovation",
             desc: "Hands-on training in AI, modern agricultural tools, and computer literacy for rural youth.",
-            img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800",
+            img: "/digital_pathshala/digital_lab.jpg",
         },
     ];
 
     return (
-        <section className="py-32 px-6 bg-[#0a0a0a] text-white">
+        <section id="programs" className="py-32 px-6 bg-[#0a0a0a] text-white">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-2">
                     <div>

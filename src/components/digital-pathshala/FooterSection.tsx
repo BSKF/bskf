@@ -22,29 +22,30 @@ const FooterSection = () => {
                             Empowering rural Bengal through digital literacy, sustainable agriculture, and community leadership.
                         </p>
                         <div className="flex gap-4 pt-4">
-                        <div className="flex gap-4 pt-4">
                             {[
-                                { Icon: Instagram, url: "https://www.instagram.com/bskf.official?igsh=MXBnMjZmc2Ztc21rcQ==" },
-                                { Icon: Twitter, url: "https://twitter.com/sustainable_ag" },
-                                { Icon: Linkedin, url: "https://www.linkedin.com/company/susthayi-krishi-foundation/" },
-                                { Icon: Facebook, url: "https://www.facebook.com/share/1CzQowPX4N/" }
+                                { Icon: Instagram, url: "https://www.instagram.com/bskf.official/" },
+                                { Icon: Linkedin, url: "https://www.linkedin.com/company/susthayi-krishi-foundation/" }
                             ].map(({ Icon, url }, i) => (
                                 <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-[#4ADE80] hover:text-black hover:scale-110 transition-all duration-300 group">
                                     <Icon size={20} className="group-hover:rotate-12 transition-transform" />
                                 </a>
                             ))}
                         </div>
-                        </div>
                     </div>
 
                     <div className="space-y-6">
                         <h4 className="text-sm font-bold tracking-widest uppercase text-gray-500 font-poppins">Quick Links</h4>
                         <ul className="space-y-4 font-poppins">
-                            {['Our Story', 'Impact', 'Programs', 'Get Involved'].map((link) => (
-                                <li key={link}>
-                                    <a href="#" className="text-[#0D1B0D] hover:text-[#4ADE80] transition-colors flex items-center gap-2 group">
+                            {[
+                                { name: 'Our Story', href: '#story' },
+                                { name: 'Impact', href: '#impact' },
+                                { name: 'Programs', href: '#programs' },
+                                { name: 'Get Involved', href: '#get-involved' }
+                            ].map((link) => (
+                                <li key={link.name}>
+                                    <a href={link.href} className="text-[#0D1B0D] hover:text-[#4ADE80] transition-colors flex items-center gap-2 group">
                                         <span className="w-0 group-hover:w-4 h-[1px] bg-[#4ADE80] transition-all duration-300"></span>
-                                        {link}
+                                        {link.name}
                                     </a>
                                 </li>
                             ))}
@@ -54,8 +55,8 @@ const FooterSection = () => {
                     <div className="space-y-6">
                         <h4 className="text-sm font-bold tracking-widest uppercase text-gray-500 font-poppins">Contact</h4>
                         <ul className="space-y-4 font-poppins text-gray-600">
-                            <li>hello@digitalpathsala.org</li>
-                            <li>+91 98765 43210</li>
+                            <li>susthayikrishifoundation@gmail.com</li>
+                            <li>+91 97497 99088</li>
                             <li>Bankura, West Bengal, India</li>
                         </ul>
                     </div>

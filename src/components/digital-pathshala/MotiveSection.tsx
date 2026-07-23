@@ -40,7 +40,7 @@ const MotiveSection = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="py-24 px-6 bg-[#020a05] text-white relative overflow-hidden">
+        <section id="story" ref={sectionRef} className="py-24 px-6 bg-[#020a05] text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1A5D1A]/10 rounded-full blur-[100px] pointer-events-none"></div>
             
             <div className="max-w-7xl mx-auto relative z-10">

@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Sprout, Heart, Linkedin, Instagram, Copy, Check, ArrowRight } from 'lucide-react';
+import { Users, Sprout, Heart, Linkedin, Instagram, Copy, Check, ArrowRight, X } from 'lucide-react';
 import CountUp from 'react-countup';
 import { FaFacebook , FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   const [copiedReg, setCopiedReg] = useState(false);
   const [copiedDarpan, setCopiedDarpan] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
 
   const handleCopy = (text: string, isReg: boolean) => {
     navigator.clipboard.writeText(text);
@@ -21,6 +22,29 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+      {showBanner && (
+        <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100] w-[95%] max-w-4xl bg-gradient-to-r from-green-400/30 to-yellow-400/30 p-[1px] rounded-full shadow-[0_0_40px_rgba(74,222,128,0.2)] backdrop-blur-xl animate-[fadeInUp_0.5s_ease-out]">
+          <div className="bg-green-950/90 rounded-full px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border border-white/20">
+            <div className="flex items-center gap-4">
+              <span className="bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-full animate-pulse flex items-center gap-2 whitespace-nowrap shadow-lg shadow-red-500/20">
+                <span className="w-2 h-2 bg-white rounded-full"></span>
+                ROUND 2 LIVE
+              </span>
+              <p className="text-base md:text-lg font-bold text-gray-100 hidden sm:block tracking-wide">
+                Digital Pathshala Round 2 Funding is Live!
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <Link to="/digital-pathshala" onClick={() => setShowBanner(false)} className="text-sm font-bold text-black bg-[#4ADE80] px-6 py-2.5 rounded-full hover:bg-white hover:scale-105 transition-all whitespace-nowrap shadow-lg shadow-[#4ADE80]/20">
+                Support Us
+              </Link>
+              <button onClick={() => setShowBanner(false)} className="text-gray-400 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-2 rounded-full flex items-center justify-center">
+                <X size={18} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Video Background */}
       <video
         autoPlay

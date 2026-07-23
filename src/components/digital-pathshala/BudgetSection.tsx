@@ -43,16 +43,18 @@ const BudgetSection = () => {
     }, []);
 
     const data = [
-        { name: "Tech Hub", value: 36, color: "#4ADE80", desc: "Computer Labs & AI Tools" }, 
-        { name: "Infrastructure", value: 20, color: "#22c55e", desc: "Building & Maintenance" },
-        { name: "Operations", value: 20, color: "#16a34a", desc: "Staff & Logistics" },
-        { name: "Education", value: 14, color: "#86efac", desc: "Teacher Training & Books" }, 
-        { name: "Community", value: 6, color: "#15803d", desc: "Outreach Programs" },
-        { name: "Seeds", value: 4, color: "#bbf7d0", desc: "Seed Bank Initiative" },
+        { name: "Digital Infrastructure", value: 26, color: "#4ADE80", desc: "Refurbished Desktops/Laptops" }, 
+        { name: "Smart Classroom", value: 20, color: "#22c55e", desc: "Projector & Accessories" },
+        { name: "Mentor Support", value: 15, color: "#16a34a", desc: "Local Mentor Stipend" },
+        { name: "Basic Infrastructure", value: 12, color: "#86efac", desc: "Furniture & Seating" }, 
+        { name: "Buffer & Emergency", value: 9, color: "#15803d", desc: "Unforeseen Expenses" },
+        { name: "Operations", value: 6, color: "#bbf7d0", desc: "Internet & Electricity" },
+        { name: "Learning Resources", value: 6, color: "#166534", desc: "Books & Activity Kits" },
+        { name: "Community Outreach", value: 6, color: "#14532d", desc: "Awareness & Events" },
     ];
 
     return (
-        <section ref={sectionRef} className="py-32 px-6 bg-[#020a05] text-white relative overflow-hidden">
+        <section id="get-involved" ref={sectionRef} className="py-32 px-6 bg-[#020a05] text-white relative overflow-hidden">
              {/* Decorative Background */}
             <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#1A5D1A]/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
             <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-[#4ADE80]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -62,12 +64,18 @@ const BudgetSection = () => {
                     
                     {/* Left Column: Text & Chart */}
                     <div className="w-full md:w-1/2 text-center md:text-left">
-                        <span className="text-[#4ADE80] font-bold tracking-[0.2em] text-sm uppercase border-b border-[#4ADE80] pb-2 inline-block mb-6">Transparency</span>
+                        <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
+                            <span className="text-[#4ADE80] font-bold tracking-[0.2em] text-sm uppercase border-b border-[#4ADE80] pb-2 inline-block">Transparency</span>
+                            <span className="bg-red-500/20 text-red-500 border border-red-500/50 text-xs font-bold px-3 py-1 rounded-full animate-pulse flex items-center gap-2 mb-2">
+                                <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                                ROUND 2 LIVE
+                            </span>
+                        </div>
                         <h2 className="text-5xl md:text-7xl font-poppins font-bold text-white mb-6 leading-tight">
                             Every Rupee<br/> <span className="text-gray-500">Accounted For.</span>
                         </h2>
                         <p className="text-xl text-gray-400 font-poppins mb-12 max-w-lg font-light">
-                            Direct impact. Zero fluff. Our pilot budget of ₹50,000 is meticulously allocated to drive real change.
+                            Direct impact. Zero fluff. Our Round 2 budget of ₹80,000 is meticulously allocated to drive real change.
                         </p>
 
                         <div ref={chartRef} className="h-[400px] relative flex items-center justify-center">

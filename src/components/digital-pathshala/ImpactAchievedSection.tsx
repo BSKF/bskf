@@ -30,7 +30,7 @@ const ImpactAchievedSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 px-6 bg-[#010502] text-white relative border-y border-white/5 overflow-hidden">
+        <section id="impact" ref={sectionRef} className="py-24 px-6 bg-[#010502] text-white relative border-y border-white/5 overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#1A5D1A]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -59,8 +59,8 @@ const ImpactAchievedSection = () => {
                             <div>
                                 <h4 className="text-xl font-bold mb-2">Two Student Batches</h4>
                                 <ul className="list-disc pl-5 text-gray-400 font-light space-y-1">
-                                    <li>Batch 01 (Classes 4–8): ~9 students per session</li>
-                                    <li>Batch 02 (Classes 9–12): ~4 students per session</li>
+                                    <li>Batch 01 (Classes 4–8): ~25 students per session</li>
+                                    <li>Batch 02 (Classes 9–12): ~5 students per session</li>
                                 </ul>
                             </div>
                         </div>

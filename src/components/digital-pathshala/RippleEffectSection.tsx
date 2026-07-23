@@ -36,7 +36,7 @@ const RippleEffectSection = () => {
                     <div className="ripple-animate opacity-0">
                         <span className="text-[#4ADE80] font-bold tracking-[0.2em] text-sm uppercase border-b border-[#4ADE80] pb-2 inline-block mb-6">Ownership</span>
                         <h2 className="text-4xl md:text-5xl font-poppins font-bold leading-tight mb-6">
-                            Beyond a Nominal Fee <br/> <span className="text-gray-500">(₹5/Day)</span>
+                            Beyond a Nominal Fee <br/> <span className="text-gray-500 block mt-2 md:mt-4">(₹5/Day)</span>
                         </h2>
                         <p className="text-gray-400 font-light mb-8 leading-relaxed">
                             A small contribution helps build a sense of ownership and responsibility among children and their families. When people invest, they are more likely to value and actively engage with the opportunity.
