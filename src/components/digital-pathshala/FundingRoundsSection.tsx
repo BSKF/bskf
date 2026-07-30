@@ -46,7 +46,7 @@ const FundingRoundsSection = () => {
                 <div className="text-center mb-16 funding-item opacity-0">
                     <span className="text-[#4ADE80] font-bold tracking-[0.2em] text-sm uppercase border-b border-[#4ADE80] pb-2 inline-block mb-4">Financials</span>
                     <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight mb-4">
-                        Funding <span className="text-[#4ADE80]">Rounds</span>
+                        Fund Raising <span className="text-[#4ADE80]">Rounds</span>
                     </h2>
                     <p className="text-gray-400 font-light max-w-2xl mx-auto">
                         This initiative is designed to maximize impact while maintaining cost efficiency. Every contribution is strategically allocated.

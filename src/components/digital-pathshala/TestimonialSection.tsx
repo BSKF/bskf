@@ -37,40 +37,29 @@ const TestimonialSection = () => {
 
     const testimonials = [
         {
-            text: "Digital Pathsala didn't just teach me to code; it gave me the wings to dream beyond the horizon of my village.",
-            author: "Riya Mondal",
-            role: "Student, Class 9",
-            location: "Bankura"
+            text: "Digital Pathshala is creating a space where learning goes beyond textbooks. It encourages curiosity, confidence, and critical thinking while helping students stay connected to their roots and community.",
+            author: "Poushali",
+            role: "Mentor"
         },
         {
-            text: "To save a seed is to save a civilization. This initiative is the heartbeat of our agricultural heritage.",
-            author: "Subimal Ghosh",
-            role: "Farmer & Mentor",
-            location: "Sonamukhi"
+            text: "What inspires me most about Digital Pathshala is its commitment to making quality learning accessible and meaningful. The students are not just gaining knowledge—they are discovering their potential.",
+            author: "Kaushiki",
+            role: "Mentor"
         },
         {
-            text: "A masterstroke of innovation—weaving the precision of modern technology with the timeless wisdom of the land.",
-            author: "Dr. Anirban Das",
-            role: "Professor, IIT Kgp",
-            location: "Advisor"
+            text: "Digital Pathshala is a thoughtful initiative that bridges educational gaps while nurturing leadership, communication, and community values. It has the potential to create lasting impact in rural and tribal regions.",
+            author: "Ghurni Bhattacharya",
+            role: "Advisor"
         },
         {
-            text: "Seeing my daughter confidently navigate a computer screen was a moment of true pride. New doors have opened.",
-            author: "Sunita Devi",
-            role: "Parent",
-            location: "Bishnupur"
+            text: "Digital Pathshala has helped me become more confident in expressing my ideas and speaking in front of others. The classes are engaging, and I have learned many things that are not taught in school.",
+            author: "Deb",
+            role: "Class XI Student"
         },
         {
-            text: "The mentorship program connects us with minds we never thought we'd reach. It's a bridge to the future.",
-            author: "Rahul Hembram",
-            role: "Student, Class 10",
-            location: "Raipur"
-        },
-        {
-            text: "Community-led growth is the only sustainable path. BSKF understands this deeply and executes it brilliantly.",
-            author: "Amitava Roy",
-            role: "Social Worker",
-            location: "Kolkata"
+            text: "I enjoy coming to Digital Pathshala because learning here is fun. I love the activities, stories, and the support I get from my teachers and mentors.",
+            author: "Suvomay Hembram",
+            role: "Class II Student"
         }
     ];
 
@@ -122,7 +111,7 @@ const TestimonialSection = () => {
                             <div className="flex items-center gap-4 mt-auto">
                                 <div>
                                     <h4 className="font-poppins font-bold text-white text-lg">{item.author}</h4>
-                                    <p className="text-sm text-[#4ADE80] font-poppins tracking-wide uppercase">{item.role}, {item.location}</p>
+                                    <p className="text-sm text-[#4ADE80] font-poppins tracking-wide uppercase">{item.role}</p>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +136,7 @@ const TestimonialSection = () => {
                             <div className="flex items-center gap-4 mt-auto">
                                 <div>
                                     <h4 className="font-poppins font-bold text-white text-lg">{item.author}</h4>
-                                    <p className="text-sm text-[#4ADE80] font-poppins tracking-wide uppercase">{item.role}, {item.location}</p>
+                                    <p className="text-sm text-[#4ADE80] font-poppins tracking-wide uppercase">{item.role}</p>
                                 </div>
                             </div>
                         </div>

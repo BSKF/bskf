@@ -41,10 +41,10 @@ const TeamSection = () => {
         { name: 'Kamini Chouhan', desig: 'Project Officer', role: 'Day-to-day project administration' },
         { name: 'Poushali Das', desig: 'Project Mentor', role: 'Student mentoring and educational support' },
         { name: 'Kaushiki Halder', desig: 'Project Mentor', role: 'Student mentoring and educational support' },
-        { name: 'Arpan Dhara', desig: 'Frontend Technical Officer', role: 'Technical Support' },
-        { name: 'Snigdha S Srinivas', desig: 'Intern', role: 'Technical Support' },
-        { name: 'Kosanam Jerusha', desig: 'Marketing Lead', role: 'Marketing and Outreach' },
-        { name: 'Anurag Gupta', desig: 'Project Outreach', role: 'Community Outreach' },
+        { name: 'Kosanam Jerusha', desig: 'Project HR & Ops Coordinator', role: 'Day-to-day project administration and operational coordination' },
+        { name: 'Arpan Dhara', desig: 'Project Technical Officer', role: 'Technical Support' },
+        { name: 'Snigdha S Srinivas', desig: 'Project Technical Officer', role: 'Technical Support' },
+        { name: 'Anurag Gupta', desig: 'Project Outreach Associate', role: 'Strategic Outreach Associate' },
     ];
 
     return (

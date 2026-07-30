@@ -31,7 +31,7 @@ const HeroSection = () => {
                 ROUND 2 LIVE
               </span>
               <p className="text-base md:text-lg font-bold text-gray-100 hidden sm:block tracking-wide">
-                Digital Pathshala Round 2 Funding is Live!
+                Digital Pathshala Round 2 Fund Raising is Live!
               </p>
             </div>
             <div className="flex items-center gap-4">
