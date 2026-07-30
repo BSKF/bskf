@@ -40,7 +40,7 @@ const TripleSHorizontalScroll = () => {
             title: "SOIL",
             subtitle: "Earth Rooted",
             desc: "A living seed bank identifying and preserving local biodiversity. Connecting technology with ancient agricultural wisdom.",
-            img: "/digital_pathshala/WhatsApp Image 2026-01-26 at 21.11.21.jpeg",
+            img: "/digital_pathshala/soil.jpg",
             color: "#FCD34D"
         },
         {

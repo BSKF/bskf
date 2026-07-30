@@ -25,11 +25,11 @@ const StickyImageNarrative = () => {
     const steps = [
         {
             text: "In the heart of West Bengal, a quiet revolution is taking root. Children who once watched the world from afar are now joining the global conversation.",
-            img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2670&auto=format&fit=crop"
+            img: "/digital_pathshala/heartOfWestBengal.jpg"
         },
         {
             text: "We believe that talent is universal, but opportunity is not. Digital Pathsala exists to bridge that gap—connecting rural potential with global tools.",
-            img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
+            img: "/digital_pathshala/talent.jpg"
         },
         {
             text: "From preserving ancient seed knowledge to mastering modern AI, we are cultivating a generation that respects its roots while reaching for the sky.",

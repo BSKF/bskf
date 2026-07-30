@@ -57,6 +57,7 @@ const FooterSection = () => {
                         <ul className="space-y-4 font-poppins text-gray-600">
                             <li>susthayikrishifoundation@gmail.com</li>
                             <li>+91 97497 99088</li>
+                            <li>+91 94740 13486</li>
                             <li>Bankura, West Bengal, India</li>
                         </ul>
                     </div>
