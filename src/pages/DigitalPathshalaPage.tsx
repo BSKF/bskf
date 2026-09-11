@@ -21,6 +21,7 @@ import TeamSection from "@/components/digital-pathshala/TeamSection";
 import RippleEffectSection from "@/components/digital-pathshala/RippleEffectSection";
 import ImpactAchievedSection from "@/components/digital-pathshala/ImpactAchievedSection";
 import FundingRoundsSection from "@/components/digital-pathshala/FundingRoundsSection";
+import PhotoGallerySection from "@/components/digital-pathshala/PhotoGallerySection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,6 +87,7 @@ const DigitalPathshalaPage = () => {
                 <TeamSection />
                 <ImpactAchievedSection />
                 <FundingRoundsSection />
+                <PhotoGallerySection />
                 <FAQSection />
                 <TestimonialSection />
                 <BudgetSection />
